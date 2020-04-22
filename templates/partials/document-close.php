@@ -1,14 +1,14 @@
 
 <div class="slogan pt-20"> 
     <div class="container">
-        <img class=" w-full m-auto "  src="http://localhost/wordpress/tendenze/wp-content/uploads/2020/04/eslogan.png" alt="Eslogan">
+        <img class=" w-full m-auto "  src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/eslogan.png" alt="Eslogan">
         <h2 class=" mt-8 text-2xl sm:text-4xl text-center">Algunos de los clientes con los que hemos trabajado</h2> 
     </div>
 </div>
 
 <div class="clients pt-20 mb-10 <?php if(is_front_page()){echo 'mb-40';}else{echo 'mb-10';} ?>">
     <div class="conatainer"> 
-        <img class="w-full max-w-5xl m-auto"  src="http://localhost/wordpress/tendenze/wp-content/uploads/2020/04/Screen-Shot-2020-04-13-at-7.40.04-PM.png" alt="">
+        <img class="w-full max-w-5xl m-auto"  src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/Screen-Shot-2020-04-13-at-7.40.04-PM.png" alt="">
     </div>
 </div>
 <footer  class="footer bg-secondary-500" >

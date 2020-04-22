@@ -22,7 +22,7 @@ get_header();?>
     <div class="container">
         <div class="md:flex py-12 w-full">
             <div class=" w-full md:w-1/2 " >
-              <img class=" w-full max-w-md md:pl-3 md:pr-5" src="http://localhost/wordpress/tendenze/wp-content/uploads/2020/04/Asesoría.png" >
+              <img class=" w-full max-w-md md:pl-3 md:pr-5" src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/Asesoría.png" >
             </div>
             <div class=" w-full md:w-1/2 mt-8 md:mt-0">
                 <span  class="text-xl font-bold text-secondary-800 " >Asesoría</span>
@@ -37,7 +37,7 @@ para encontrar la esencia de la marca. <br>
                 la categoría, la competencia y las motivaciones del consumidor identificamos el rol que tu marca debe cumplir para desarrollar relaciones
                 sólidas y auténticas con el consumidor.
                 </p>
-                <a href="#"  class=" inline-block mt-5 py-2 px-8 text-black  border border-black font-bold   tracking-widest " >me interesa</a>
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=998315039&text=Hola%20Tendenze%20Per%C3%BA.%20Necesito%20m%C3%A1s%20informaci%C3%B3n"  class=" inline-block mt-5 py-2 px-8 text-black  border border-black font-bold   tracking-widest " >me interesa</a>
             </div>
         </div>
     </div>
@@ -57,10 +57,10 @@ para encontrar la esencia de la marca. <br>
                         Directora de cuentas <br>
                         & estrategia</h3>
                 </div>
-                <img class="foundress-avatar  rounded-full " src="http://localhost/wordpress/tendenze/wp-content/uploads/2020/04/Screen-Shot-2020-04-15-at-6.01.24-PM.png" alt="">
+                <img class="foundress-avatar  rounded-full " src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/Screen-Shot-2020-04-15-at-6.01.24-PM.png" alt="">
             </div>
             <div class="flex justify-start items-center" >
-                <img class="foundress-avatar  rounded-full " src="http://localhost/wordpress/tendenze/wp-content/uploads/2020/04/karina.jpg" alt="">
+                <img class="foundress-avatar  rounded-full " src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/karina.jpg" alt="">
                 <div  class="pl-8" >
                         <h2 class="font-semibold text-secondary-600" >Martina Anfossi</h2>
                             <h3 class="text-secondary-500 leading-6 mt-1 font-medium " >Fundadora <br>
