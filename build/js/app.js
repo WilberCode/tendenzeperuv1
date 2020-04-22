@@ -110,7 +110,7 @@
 // });
 // import './materialize/materialize.min.js'
 // import './components/posts'
-var $ = jQuery(); // Shorthand 
+var $ = jQuery.noConflict(); // Shorthand 
 
 var Id = document.getElementById.bind(document);
 var className = document.getElementsByClassName.bind(document);
@@ -120,6 +120,11 @@ function menuMobile() {
   var navToggle = Id('nav-toggle');
   var mobileNav = Id('mobile-nav-wrap');
   navToggle.addEventListener('click', function () {
+    navToggle.classList.toggle('nav-toggle-active');
+    mobileNav.classList.toggle('nav-active');
+  });
+  $('#mobile-menu li').on('click', function () {
+    console.log('hola li');
     navToggle.classList.toggle('nav-toggle-active');
     mobileNav.classList.toggle('nav-active');
   });
@@ -133,7 +138,6 @@ function separateFirstText() {
     if (firstSpaceIndex > 0) {
       var substrBefore = text.substring(0, firstSpaceIndex);
       var substrAfter = text.substring(firstSpaceIndex, text.length);
-      console.log(substrBefore);
       var newText = '<span class="card-category">' + substrBefore + '</span>' + substrAfter;
       this.innerHTML = newText;
     } else {
@@ -142,10 +146,12 @@ function separateFirstText() {
   });
 }
 
-$(document).ready(function () {
-  menuMobile(); // Menu Mobile: Show menu and hide 
+jQuery(function ($) {
+  $(document).ready(function () {
+    menuMobile(); // Menu Mobile: Show menu and hide 
 
-  separateFirstText(); // Card title: serate the first word in a span
+    separateFirstText(); // Card title: serate the first word in a span
+  });
 }); // Suscribe
 // jQuery(function ($) {
 //   $( '.mailpoet_text' ).focus( function(){  
