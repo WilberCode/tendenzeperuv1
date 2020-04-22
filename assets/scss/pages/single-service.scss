@@ -1,0 +1,25 @@
+.service{
+    &-main{
+        p{
+            @apply leading-normal m-0;
+            font-size: 1.4rem;
+        }
+        img{
+            @apply w-full;  
+        }
+        & .card-price{
+            max-width:380px;
+        }
+        .wp-block-buttons .wp-block-button{ 
+            @apply w-full;
+            max-width: 380px;
+        }
+        .wp-block-button__link{
+            @apply bg-primary-500 tracking-widest w-full text-black font-semibold text-base py-5 px-4 rounded-full inline-block ;
+            max-width: 380px;
+            &:focus{
+                @apply shadow-outline  outline-none;
+            }
+        }
+    }
+}

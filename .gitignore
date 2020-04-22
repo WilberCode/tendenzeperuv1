@@ -1,0 +1,7 @@
+.idea
+.vscode
+node_modules 
+tailwind-example.js
+tailwind.js
+webpack.mix.js
+gitignore
