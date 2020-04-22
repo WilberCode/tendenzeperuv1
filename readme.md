@@ -1,2 +1,4 @@
-# WphFrontend
-Es un boilerplate para desarrollar plantillas en WordPress que usa TailwindCSS y Laravel Mix 
+# Grupo Tendenze Comunicaciones
+
+## Página web: https://nuevo.tendenzeperu.com
+ 
