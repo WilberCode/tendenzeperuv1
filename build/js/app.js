@@ -110,19 +110,22 @@
 // });
 // import './materialize/materialize.min.js'
 // import './components/posts'
-// Shorthand 
+var $ = jQuery(); // Shorthand 
+
 var Id = document.getElementById.bind(document);
 var className = document.getElementsByClassName.bind(document);
-var tagName = document.getElementsByTagName.bind(document); // Toggle and Menu 
+var tagName = document.getElementsByTagName.bind(document);
 
-var navToggle = Id('nav-toggle');
-var mobileNav = Id('mobile-nav-wrap');
-navToggle.addEventListener('click', function () {
-  navToggle.classList.toggle('nav-toggle-active');
-  mobileNav.classList.toggle('nav-active');
-}); // Card title: separa el primer texto a span
+function menuMobile() {
+  var navToggle = Id('nav-toggle');
+  var mobileNav = Id('mobile-nav-wrap');
+  navToggle.addEventListener('click', function () {
+    navToggle.classList.toggle('nav-toggle-active');
+    mobileNav.classList.toggle('nav-active');
+  });
+}
 
-jQuery(function ($) {
+function separateFirstText() {
   $('.card__title').each(function () {
     var text = this.innerHTML;
     var firstSpaceIndex = text.indexOf(" ");
@@ -137,6 +140,12 @@ jQuery(function ($) {
       this.innerHTML = '<span class="card-category">' + text + '</span>';
     }
   });
+}
+
+$(document).ready(function () {
+  menuMobile(); // Menu Mobile: Show menu and hide 
+
+  separateFirstText(); // Card title: serate the first word in a span
 }); // Suscribe
 // jQuery(function ($) {
 //   $( '.mailpoet_text' ).focus( function(){  

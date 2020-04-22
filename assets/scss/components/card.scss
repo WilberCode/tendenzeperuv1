@@ -1,5 +1,5 @@
 .card{
-    @apply bg-white w-full flex flex-col  flex-no-wrap  justify-between   text-black; 
+    @apply bg-white w-full flex flex-col flex-no-wrap justify-between text-black outline-none; 
      
     &-body{
         @apply pt-6 pb-0 px-3 bg-white flex-1; 

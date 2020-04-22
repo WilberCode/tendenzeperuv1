@@ -22,24 +22,24 @@
 // import './materialize/materialize.min.js'
 // import './components/posts'
  
-
+var $ = jQuery()  
 // Shorthand 
 const Id = document.getElementById.bind(document)
 const className = document.getElementsByClassName.bind(document)
 const tagName = document.getElementsByTagName.bind(document)
 
-// Toggle and Menu 
-let navToggle = Id('nav-toggle')
-let mobileNav = Id('mobile-nav-wrap')
 
-navToggle.addEventListener('click', () => {
-  navToggle.classList.toggle('nav-toggle-active')
-  mobileNav.classList.toggle('nav-active')  
-}) 
+function menuMobile(){ 
+    let navToggle = Id('nav-toggle')
+    let mobileNav = Id('mobile-nav-wrap')
 
-// Card title: separa el primer texto a span
-
-jQuery(function ($) { 
+    navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('nav-toggle-active')
+    mobileNav.classList.toggle('nav-active')  
+    }) 
+}
+ 
+function separateFirstText(){
     $('.card__title').each(function() { 
         var text = this.innerHTML;
         var firstSpaceIndex = text.indexOf(" "); 
@@ -53,7 +53,13 @@ jQuery(function ($) {
             this.innerHTML = '<span class="card-category">' + text + '</span>';
         }
     }); 
+}
+ 
+$(document).ready(function () {  
+    menuMobile() // Menu Mobile: Show menu and hide 
+    separateFirstText() // Card title: serate the first word in a span
 });
+
  
 
 

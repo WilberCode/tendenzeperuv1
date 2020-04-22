@@ -5,15 +5,16 @@
 // Custom styles 
 // @import "../font/font"; 
 @import "partials/base";
-@import "lib/mixins";
-@import "partials/animations";
+@import "partials/hacks"; 
+@import "lib/mixins";  
+
 @import "components/card";
 @import "components/button";
 @import "components/search-form"; 
 @import "components/input"; 
-@import "partials/components"; 
-@import "partials/utilities"; 
+
 @import "layout/header"; 
 @import "layout/footer"; 
+
 @import "pages/front-page"; 
 @import "pages/single-service"; 
