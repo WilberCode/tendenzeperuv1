@@ -18,7 +18,7 @@
                         <a class="text-lg text-black block mb-3" href="<?php the_permalink(); ?>" >  <?php the_title();  ?>  </a> 
                         <?php endwhile;
                     else:
-                        printf('<p>No hay entradas</p>');
+                        printf('<p>Sin contenido</p>');
                     endif;
                     rewind_posts();  ?>    
                     <!-- End While post type services --> 
@@ -28,10 +28,10 @@
                                 while(have_posts()):  
                                     the_post(); ?>
                                      <h1  class=" mt-6 mb-6 text-4xl text-black font-normal " ><?php  the_title(); ?> </h1>  
-						    |   <?php  the_content(); ?>
+						      <?php  the_content(); ?>
                 <?php endwhile;
                         else:
-                            printf('<p>No hay entradas</p>');
+                            printf('<p>Sin contenido</p>');
                     endif;
                 rewind_posts(); ?>
            </main>
