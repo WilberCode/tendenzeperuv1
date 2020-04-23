@@ -17,7 +17,7 @@
             <div  class="sm:flex items-center sm:col-span-2 lg:col-span-1" >
                 <p  class="text-white text-base sm:text-xs pr-16" >Av. Del Ejército 1180 Of. 304, <br>
                 Magdalena del Mar 15076 </p>
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=998315039&text=Hola%20Tendenze%20Per%C3%BA.%20Necesito%20m%C3%A1s%20informaci%C3%B3n"  class=" text-center footer__contact font-bold border-2 border-primary-500 py-2 px-10 text-white hover:text-primary-500  text-base sm:text-sm  ms:inline-block" >Contacto</a>
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=+51998315039&text=Hola%20Tendenze%20Per%C3%BA.%20Necesito%20m%C3%A1s%20informaci%C3%B3n"  class=" text-center footer__contact font-bold border-2 border-primary-500 py-2 px-10 text-white hover:text-primary-500  text-base sm:text-sm  ms:inline-block" >Contacto</a>
             </div>  
             <div  class="flex items-center   sm:col-span-1  lg:col-span-1 hidden">
             <?php  

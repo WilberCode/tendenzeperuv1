@@ -17,7 +17,7 @@ para encontrar la esencia de la marca. <br>
                 la categoría, la competencia y las motivaciones del consumidor identificamos el rol que tu marca debe cumplir para desarrollar relaciones
                 sólidas y auténticas con el consumidor.
                 </p>
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=998315039&text=Hola%20Tendenze%20Per%C3%BA.%20Necesito%20m%C3%A1s%20informaci%C3%B3n"  class=" inline-block mt-5 py-2 px-8 text-black  border border-black font-bold   tracking-widest " >me interesa</a>
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=+51998315039&text=Hola%20Tendenze%20Per%C3%BA.%20Necesito%20m%C3%A1s%20informaci%C3%B3n"  class=" inline-block mt-5 py-2 px-8 text-black  border border-black font-bold   tracking-widest " >me interesa</a>
             </div>
         </div>
     </div>

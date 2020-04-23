@@ -11,7 +11,7 @@
                 </a> 
             </div>
             <div class=" "> 
-            <a  class="h-full  flex items-center text-white " target="_blank"  href="https://api.whatsapp.com/send?phone=998315039&text=Hola%20Tendenze%20Per%C3%BA.%20Necesito%20m%C3%A1s%20informaci%C3%B3n"> Contacto </a>
+            <a  class="h-full  flex items-center text-white " target="_blank"  href="https://api.whatsapp.com/send?phone=+51998315039&text=Hola%20Tendenze%20Per%C3%BA.%20Necesito%20m%C3%A1s%20informaci%C3%B3n"> Contacto </a>
             </div>
        </div>
     </div>
