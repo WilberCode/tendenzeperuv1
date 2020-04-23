@@ -16739,6 +16739,13 @@ code {
   margin-right: 1.5rem;
 }
 
+@media (min-width: 768px) {
+  .header-menu > .menu-item, .header-menu > li, .header > ul > .menu-item, .header > ul > li {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+}
+
 .header-menu > .menu-item:hover .sub-menu, .header-menu > li:hover .sub-menu, .header > ul > .menu-item:hover .sub-menu, .header > ul > li:hover .sub-menu {
   display: block;
 }
