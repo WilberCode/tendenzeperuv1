@@ -17235,9 +17235,21 @@ code {
   max-width: 380px;
 }
 
+@media (max-width: 640px) {
+  .service-main .card-price {
+    margin-top: 3.8rem;
+  }
+}
+
 .service-main .wp-block-buttons .wp-block-button {
   width: 100%;
   max-width: 380px;
+}
+
+@media (max-width: 640px) {
+  .service-main .wp-block-buttons .wp-block-button {
+    text-align: center;
+  }
 }
 
 .service-main .wp-block-button__link {

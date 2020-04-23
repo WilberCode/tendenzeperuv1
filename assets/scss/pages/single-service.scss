@@ -20,10 +20,16 @@
         & .card-price{
             margin-top: 4.2rem;
             max-width:380px;
+            @screen maxsm{
+                margin-top: 3.8rem; 
+             }
         }
         .wp-block-buttons .wp-block-button{ 
             @apply w-full;
             max-width: 380px;
+            @screen maxsm{
+                @apply text-center;
+             }
         }
         .wp-block-button__link{
             @apply bg-primary-500 tracking-widest w-full text-black font-semibold text-base py-5 px-4 rounded-full inline-block ;
