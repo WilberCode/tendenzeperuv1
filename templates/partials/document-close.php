@@ -6,7 +6,7 @@
     </div>
 </div>
 
-<div class="clients pt-20 mb-10 <?php if(is_front_page()){echo 'mb-40';}else{echo 'mb-10';} ?>">
+<div class="clients pt-10 sm:pt-20 mb-10 <?php if(is_front_page()){echo ' mb-10 sm:mb-40';}else{echo 'mb-10';} ?>">
     <div class="conatainer"> 
         <img class="w-full max-w-5xl m-auto"  src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/Screen-Shot-2020-04-13-at-7.40.04-PM.png" alt="">
     </div>
@@ -19,7 +19,7 @@
                 Magdalena del Mar 15076 </p>
                 <a target="_blank" href="https://api.whatsapp.com/send?phone=998315039&text=Hola%20Tendenze%20Per%C3%BA.%20Necesito%20m%C3%A1s%20informaci%C3%B3n"  class=" text-center footer__contact font-bold border-2 border-primary-500 py-2 px-10 text-white hover:text-primary-500  text-base sm:text-sm  ms:inline-block" >Contacto</a>
             </div>  
-            <div  class="flex items-center   sm:col-span-1  lg:col-span-1 hidden " >
+            <div  class="flex items-center   sm:col-span-1  lg:col-span-1 hidden">
             <?php  
                 wp_nav_menu(array(
                     'theme_location'  => 'social',
