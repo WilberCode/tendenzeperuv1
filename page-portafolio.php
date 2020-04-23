@@ -40,8 +40,7 @@ get_header();?>
                             printf('<p>Sin contenido</p>');
                     endif;
                 rewind_posts(); ?>
-           </main>
-            
+           </main> 
        </div>
    </div>   
  </div>
