@@ -17192,6 +17192,14 @@ code {
   }
 }
 
+.service-main h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 2.25rem;
+  color: #000;
+  font-weight: 400;
+}
+
 .service-main p {
   line-height: 1.5;
   margin: 0;
