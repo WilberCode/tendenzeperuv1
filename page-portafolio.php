@@ -29,7 +29,7 @@ get_header();?>
                     rewind_posts();  ?>    
                     <!-- End While post type services --> 
             </aside>
-           <main class="service-main col-span-2 ">  
+           <main class="service-main col-span-2 text-center sm:text-left ">  
                 <?php if(have_posts()):
                                 while(have_posts()):  
                                     the_post(); ?>

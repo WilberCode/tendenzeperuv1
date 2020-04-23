@@ -16986,6 +16986,12 @@ code {
   max-width: 356px;
 }
 
+@media (max-width: 640px) {
+  .slogan img {
+    max-width: 180px;
+  }
+}
+
 .footer__contact {
   position: relative;
 }
@@ -17200,10 +17206,24 @@ code {
   font-weight: 400;
 }
 
+@media (max-width: 640px) {
+  .service-main h1 {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }
+}
+
 .service-main p {
   line-height: 1.5;
   margin: 0;
   font-size: 1.4rem;
+}
+
+@media (max-width: 640px) {
+  .service-main p {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
 }
 
 .service-main img {
@@ -17234,6 +17254,16 @@ code {
   border-radius: 9999px;
   display: inline-block;
   max-width: 380px;
+}
+
+@media (max-width: 640px) {
+  .service-main .wp-block-button__link {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 230px;
+  }
 }
 
 .service-main .wp-block-button__link:focus {
