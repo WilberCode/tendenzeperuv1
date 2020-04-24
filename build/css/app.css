@@ -17304,6 +17304,14 @@ code {
   opacity: 0;
 }
 
+.vimeography-theme-harvestone {
+  display: none;
+}
+
+.show-video {
+  display: block !important;
+}
+
 @media (min-width: 640px){
   .sm\:sr-only{
     position: absolute;

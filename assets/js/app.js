@@ -29,6 +29,7 @@ const className = document.getElementsByClassName.bind(document)
 const tagName = document.getElementsByTagName.bind(document)
 
 
+
 function menuMobile(){ 
     let navToggle = Id('nav-toggle')
     let mobileNav = Id('mobile-nav-wrap')   
@@ -63,10 +64,23 @@ function separateFirstText(){
 jQuery(function ($) {  
     $(document).ready(function () {  
         menuMobile() // Menu Mobile: Show menu and hide 
-        separateFirstText() // Card title: serate the first word in a span
+        separateFirstText() // Card title: serate the first word in a span 
+        $('.show-videos').click(()=>{
+            $('.vimeography-theme-harvestone').toggleClass('show-video')
+            console.log('hola')
+        })
     }); 
 });
-
+$( document ).ready(function($) {
+//    setTimeout(()=>{ 
+//     var cssLink = document.createElement("link");
+//     cssLink.href= "build/css/app.css";
+//     cssLink.rel = "stylesheet";
+//     cssLink.type="text/css";
+//     $("iframe").contents().find("head").append(cssLink);
+//     $("iframe").addClass( "mt-20" );
+//    },10000)   
+});
 
 // Suscribe
 
