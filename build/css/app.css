@@ -17015,6 +17015,12 @@ code {
   bottom: -26px;
 }
 
+@media (max-width: 640px) {
+  .footer__contact::before {
+    bottom: -25px;
+  }
+}
+
 .social-nav {
   width: 100%;
   display: -webkit-box;
@@ -17288,6 +17294,14 @@ code {
 .service-main .wp-block-button__link:focus {
   box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
   outline: 0;
+}
+
+.player .vp-title .vp-title-header {
+  opacity: 0 !important;
+}
+
+.vp-sidedock {
+  opacity: 0;
 }
 
 @media (min-width: 640px){

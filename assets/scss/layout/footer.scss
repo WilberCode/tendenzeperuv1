@@ -19,6 +19,9 @@
             height: 26px;
             right: 30px;
             bottom: -26px;
+            @screen maxsm{
+                bottom: -25px;
+            }
         }
     }
 }

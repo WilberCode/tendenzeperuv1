@@ -12,7 +12,7 @@
     </div>
 </div>
 <footer  class="footer bg-secondary-500" >
-    <div class="container m-auto py-6"> 
+    <div class="container m-auto pt-6 pb-16 sm:py-6"> 
         <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-2 row-gap-8">
             <div  class="sm:flex items-center sm:col-span-2 lg:col-span-1" >
                 <p  class="text-white text-base sm:text-xs pr-16" >Av. Del Ejército 1180 Of. 304, <br>
