@@ -59,86 +59,35 @@ function separateFirstText(){
     }); 
 }
  
+function showVideos(){
+    $('.show-videos').click(()=>{
+        $('.vimeography-theme-harvestone').toggleClass('show-video') 
+    })
+}
 
 
 jQuery(function ($) {  
     $(document).ready(function () {  
         menuMobile() // Menu Mobile: Show menu and hide 
         separateFirstText() // Card title: serate the first word in a span 
-        $('.show-videos').click(()=>{
-            $('.vimeography-theme-harvestone').toggleClass('show-video')
-            console.log('hola')
-        })
-    }); 
-});
-$( document ).ready(function($) {
-//    setTimeout(()=>{ 
-//     var cssLink = document.createElement("link");
-//     cssLink.href= "build/css/app.css";
-//     cssLink.rel = "stylesheet";
-//     cssLink.type="text/css";
-//     $("iframe").contents().find("head").append(cssLink);
-//     $("iframe").addClass( "mt-20" );
-//    },10000)   
+        showVideos()
+    });  
 });
 
-// Suscribe
-
-// jQuery(function ($) {
-//   $( '.mailpoet_text' ).focus( function(){  
-//       $('.mailpoet_text_label').addClass('mailpoet_text_label_focus')
-//   }); 
-//   $( '.mailpoet_text' ).focusout( function(event){  
-//    if(!$( this ).val()){
-//     $('.mailpoet_text_label').removeClass('mailpoet_text_label_focus')
-//    } 
-//   });
-// });
- 
-
-// Id('menu').addEventListener('click', (e) => {
-//   nav.classList.toggle('nav-active')
-//   navToggle.classList.toggle('nav-toggle-active')
-// }) 
-
-// M.AutoInit(); 
-
-// Start ScrollSpy
-// document.addEventListener('DOMContentLoaded', function () {
-//     var elems = document.querySelectorAll('.scrollspy');
-//     var instances = M.ScrollSpy.init(elems, options); 
-
-// }); 
-//   End ScrollSpy
-// var instance = M.Tabs.init(el, options);
-
-// Start Tabs
- 
-
-// End Tabs
-
-
-
-// Start Pushpin
- 
-
-//  window.onscroll = function () {
-//      myFunction()
-//  };
-
-//  var tab = document.getElementById("tab");
-//  var sticky = tab.offsetTop;
-
-//  function myFunction() {
-//      if (window.pageYOffset >= sticky) {
-//          tab.classList.add("sticky")
-//      } else {
-//          tab.classList.remove("sticky");
-//      }
-//  }
-
-//   End Pushpin
  
  
-  // instance.destroy();
+$(document).ready( function () {
+    setTimeout(()=>{ 
+        let irf = document.getElementsByTagName('iframe')
+        irf[0].id ="iframe1"
 
+        // $('#iframe1').css({ 'border-top': '2px solid red'})
+        // $('#iframe1').load( function () {
+        //     $(this).contents().find(".vp-sidedock").css({'opacity':'0'});
+        //     console.log('hola')
+        // });
+        $("iframe1").contents().find("html").css({'padding':'1em'});
+     },10000)
+    
+});
+ 
