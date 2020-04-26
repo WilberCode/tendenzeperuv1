@@ -128,42 +128,13 @@ function wph_front_widgets(){
         'description'   => 'Contactos de la empresa',
         'before_widget' => '<div class="footer-contact">',
         'after_widget'  => '</div>'  
-    )); 
-    register_sidebar(array(
-        'name' => __('Imagen Principal de la galeria'),
-        'id' =>'gallery-image',
-        'description'   => 'Image principal',
-        'before_widget' => '<div class="gallery-image">',
-        'after_widget'  => '</div>'  
-    )); 
-    register_sidebar(array(
-        'name' => __('Galeria en Home'),
-        'id' =>'gallery-images',
-        'description'   => 'Imagenes de actividades recientes',
-        'before_widget' => '<div class="gallery-images">',
-        'after_widget'  => '</div>'  
-    )); 
-    register_sidebar(array(
-        'name' => __('Suscribirse'),
-        'id' =>'suscribe-form',
-        'description'   => 'Para enviar newsletter',
-        'before_widget' => '<div class="suscribe-form">',
-        'after_widget'  => '</div>'  
-    )); 
-    register_sidebar(array(
-        'name' => __('Clientes'),
-        'id' =>'clients-images',
-        'description'   => 'Marcas de clientes',
-        'before_widget' => '<div class="clients-image">',
-        'after_widget'  => '</div>'  
-    )); 
+    ));   
   
 }
 add_action('widgets_init', 'wph_front_widgets');
 
-// Logo
-
-function wph_get_custom_logo( $html ) {
+// Logo 
+function tz_get_custom_logo( $html ) {
 
 	$logo_id = get_theme_mod( 'custom_logo' );
 
@@ -211,7 +182,7 @@ function wph_get_custom_logo( $html ) {
 
 }
 
-add_filter( 'get_custom_logo', 'wph_get_custom_logo' ); 
+add_filter( 'get_custom_logo', 'tz_get_custom_logo' ); 
 
 
 

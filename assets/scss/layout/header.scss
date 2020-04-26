@@ -29,7 +29,7 @@
         @apply flex m-0 h-full relative flex-no-wrap ; 
         &>.menu-item, & > li{
               @apply block ml-6 mr-6 ;
-              @screen maxmd {
+              @screen maxlg {
                 @apply ml-3 mr-3 ;
               }
               &:hover .sub-menu{

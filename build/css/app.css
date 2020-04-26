@@ -16739,7 +16739,7 @@ code {
   margin-right: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .header-menu > .menu-item, .header-menu > li, .header > ul > .menu-item, .header > ul > li {
     margin-left: 0.75rem;
     margin-right: 0.75rem;
