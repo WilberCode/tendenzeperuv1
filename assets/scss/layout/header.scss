@@ -1,5 +1,5 @@
 .header{
-    @apply shadow relative bg-white ;  
+    @apply relative bg-white ;  
     &-wrap::before { 
         content: '';
         @apply absolute z-30  w-full h-full bg-white block;

@@ -81,6 +81,10 @@ code {
   --primary:#FAE800;
   --secondary:#231F20;
 }
+
+$primary:#FAE800;
+$secondary:#231F20;
+
 .container{
   @apply m-auto;
 }

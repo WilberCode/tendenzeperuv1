@@ -1,12 +1,8 @@
-import courses from './courses'
-import congresses from './congresses' 
-import diplomas from './diplomas' 
+import filterMarcas from './filterMarcas' 
 
 //fetch all posts with ajax
 jQuery(function ($) { 
-    courses($) 
-    congresses($)  
-    diplomas($)   
+    filterMarcas($)  
 });
 
 

@@ -90,26 +90,14 @@
 /*!**************************!*\
   !*** ./assets/js/app.js ***!
   \**************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// you can import modules from the theme lib or even from
-// NPM packages if they support it…
-// import ExampleComponent1 from "./components/ExampleComponent1";
-// you can also require modules if they support it…
-// const ExampleModule2 = require('./components/example-2');
-// Some convenient tools to get you started…
-// import ReplaceObfuscatedEmailAddresses from "./components/ReplaceObfuscatedEmailAddresses";
-// import AnimateOnPageLinks from "./components/AnimateOnPageLinks";
-// Initialise our components on jQuery.ready…
-// jQuery(function ($) {
-//     ExampleComponent1.init();
-//     ExampleModule2.init();
-//     ReplaceObfuscatedEmailAddresses.init();
-//     AnimateOnPageLinks.init();
-// });
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_posts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/posts */ "./assets/js/components/posts.js");
 // import './materialize/materialize.min.js'
-// import './components/posts'
+
 var $ = jQuery.noConflict(); // Shorthand 
 
 var Id = document.getElementById.bind(document);
@@ -117,9 +105,8 @@ var className = document.getElementsByClassName.bind(document);
 var tagName = document.getElementsByTagName.bind(document);
 
 function menuMobile() {
-  var navToggle = Id('nav-toggle');
   var mobileNav = Id('mobile-nav-wrap');
-  navToggle.addEventListener('click', function () {
+  $('#nav-toggle').on('click', function () {
     navToggle.classList.toggle('nav-toggle-active');
     mobileNav.classList.toggle('nav-active');
   });
@@ -152,28 +139,90 @@ function showVideos() {
   });
 }
 
+function activeCategory() {
+  $('.marca-category-filter').on('click', function (e) {
+    $('.marca-category-filter').each(function (u) {
+      $(this).removeClass('marca-category-active');
+    });
+    $(this).toggleClass('marca-category-active');
+  });
+}
+
 jQuery(function ($) {
   $(document).ready(function () {
     menuMobile(); // Menu Mobile: Show menu and hide 
 
     separateFirstText(); // Card title: serate the first word in a span 
 
-    showVideos();
+    showVideos(); // Button show the videos
+
+    activeCategory(); // Active color of categories
+
+    $('.marca-card').on('click', function (e) {
+      e.preventDefault();
+      console.log($(this));
+      $('#marca-modal').toggleClass('marca-modal-active');
+    });
+    $('.marca-modal-close').on('click', function (e) {
+      $('#marca-modal').removeClass('marca-modal-active');
+    });
   });
 });
-$(document).ready(function () {
-  setTimeout(function () {
-    var irf = document.getElementsByTagName('iframe');
-    irf[0].id = "iframe1"; // $('#iframe1').css({ 'border-top': '2px solid red'})
-    // $('#iframe1').load( function () {
-    //     $(this).contents().find(".vp-sidedock").css({'opacity':'0'});
-    //     console.log('hola')
-    // });
 
-    $("iframe1").contents().find("html").css({
-      'padding': '1em'
+/***/ }),
+
+/***/ "./assets/js/components/filterMarcas.js":
+/*!**********************************************!*\
+  !*** ./assets/js/components/filterMarcas.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var filterMarcas = function filterMarcas($) {
+  $('.marca-category-filter > a').on('click', function (e) {
+    e.preventDefault();
+    var category = $(this).data('category');
+    var html_course = '';
+    var headers = new Headers({
+      'Content-Type': 'application/json',
+      'X-WP-Nonce': ajax_marcas.nonce
     });
-  }, 10000);
+    var category_url = $(this)[0].id === 'marca-todos' ? '' : "?category=".concat(category);
+    fetch("".concat(ajax_marcas.url, "/").concat(category_url), {
+      method: 'get',
+      headers: headers,
+      credentials: 'same-origin'
+    }).then(function (response) {
+      return response.ok ? response.json() : 'No hay marcas...';
+    }).then(function (json_response) {
+      json_response.map(function (post) {
+        html_course += "   \n                                   <div class=\"block marca-card\" >\n                                        <div  class=\"marca-card-image flex justify-center items-center h-56 sm:h-65 p-4 \" >\n                                            <img  class=\"w-full\" style=\"max-width: 140px;\"  src=\" ".concat(post.thumbnail, "\" alt=\"").concat(post.link, "\" >  \n                                        </div>\n                                        <h2  class=\"text-lg font-medium text-secondary-300 mt-2 \" >Ver Regalos</h2>\n                                    </div>  \n                                  ");
+      });
+      $('#marca-grid').html(html_course);
+    });
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (filterMarcas);
+
+/***/ }),
+
+/***/ "./assets/js/components/posts.js":
+/*!***************************************!*\
+  !*** ./assets/js/components/posts.js ***!
+  \***************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _filterMarcas__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./filterMarcas */ "./assets/js/components/filterMarcas.js");
+ //fetch all posts with ajax
+
+jQuery(function ($) {
+  Object(_filterMarcas__WEBPACK_IMPORTED_MODULE_0__["default"])($);
 });
 
 /***/ }),

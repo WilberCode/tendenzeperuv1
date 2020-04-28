@@ -40,6 +40,48 @@ function thumbnail_image_url($size){
 
 
  
+function events_endpoint() {
+	register_rest_route( 'marcas/', 'destacados/', array(
+        'methods'  =>   'GET' ,
+        'callback' => 'get_marcas',
+    )); 
+   
+}
+add_action( 'rest_api_init', 'events_endpoint' );
+  
+function get_marcas($request){ 
+    // $cat = get_category_by_slug( $request['belleza'] );
+	$args = array (
+		'post_type'    		=> 'marca',
+        'posts_per_page'    => -1,
+		'category_name'     => $request['category'],
+		'p' =>$request['post_id']
+	);
+	// Run a custom query
+	$meta_query = new WP_Query($args);
+	
+	if($meta_query->have_posts()) {
+		//Define and empty array
+		$i = 0;
+		$data = array();
+		// Store each post's data in the array
+		while($meta_query->have_posts()) {
+			$meta_query->the_post();
+			$data[$i]['title']          =   get_the_title(); 
+			$data[$i]['thumbnail']      =   get_the_post_thumbnail_url(get_the_ID(), 'full');
+			$data[$i]['link']           =   get_the_permalink(); 
+			$i++;
+		}
+		// Return the data
+		return $data;
+	}else{
+		return [];
+	}
+}
+ 
+
+
+ 
 
 
 

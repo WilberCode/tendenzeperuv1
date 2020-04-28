@@ -1,26 +1,6 @@
-// you can import modules from the theme lib or even from
-// NPM packages if they support it…
-// import ExampleComponent1 from "./components/ExampleComponent1";
-
-// you can also require modules if they support it…
-// const ExampleModule2 = require('./components/example-2');
-
-// Some convenient tools to get you started…
-// import ReplaceObfuscatedEmailAddresses from "./components/ReplaceObfuscatedEmailAddresses";
-// import AnimateOnPageLinks from "./components/AnimateOnPageLinks";
-
-
-// Initialise our components on jQuery.ready…
-// jQuery(function ($) {
-//     ExampleComponent1.init();
-//     ExampleModule2.init();
-//     ReplaceObfuscatedEmailAddresses.init();
-//     AnimateOnPageLinks.init();
-// });
-  
-  
+ 
 // import './materialize/materialize.min.js'
-// import './components/posts'
+import './components/posts'
  
 var $ = jQuery.noConflict();
 // Shorthand 
@@ -30,10 +10,9 @@ const tagName = document.getElementsByTagName.bind(document)
 
 
 
-function menuMobile(){ 
-    let navToggle = Id('nav-toggle')
+function menuMobile(){  
     let mobileNav = Id('mobile-nav-wrap')   
-    navToggle.addEventListener('click', () => {
+   $('#nav-toggle').on('click', () => {
         navToggle.classList.toggle('nav-toggle-active')
         mobileNav.classList.toggle('nav-active')  
     }) 
@@ -63,31 +42,33 @@ function showVideos(){
     $('.show-videos').click(()=>{
         $('.vimeography-theme-harvestone').toggleClass('show-video') 
     })
+} 
+ 
+function activeCategory(){
+    $('.marca-category-filter').on('click',function(e){
+        $('.marca-category-filter').each(function(u) {  
+            $(this).removeClass('marca-category-active')  
+        });  
+        $(this).toggleClass('marca-category-active') 
+    })
 }
-
 
 jQuery(function ($) {  
     $(document).ready(function () {  
-        menuMobile() // Menu Mobile: Show menu and hide 
+        menuMobile()        // Menu Mobile: Show menu and hide 
         separateFirstText() // Card title: serate the first word in a span 
-        showVideos()
+        showVideos()        // Button show the videos
+        activeCategory()    // Active color of categories
+
+        $('.marca-card').on('click', function(e){
+            e.preventDefault()
+            console.log($(this))
+            $('#marca-modal').toggleClass('marca-modal-active')
+        })
+        $('.marca-modal-close').on('click', function(e){ 
+            $('#marca-modal').removeClass('marca-modal-active')
+        })
+
     });  
-});
-
- 
- 
-$(document).ready( function () {
-    setTimeout(()=>{ 
-        let irf = document.getElementsByTagName('iframe')
-        irf[0].id ="iframe1"
-
-        // $('#iframe1').css({ 'border-top': '2px solid red'})
-        // $('#iframe1').load( function () {
-        //     $(this).contents().find(".vp-sidedock").css({'opacity':'0'});
-        //     console.log('hola')
-        // });
-        $("iframe1").contents().find("html").css({'padding':'1em'});
-     },10000)
-    
 });
  

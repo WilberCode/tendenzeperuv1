@@ -1,16 +1,18 @@
-
-<div class="slogan pt-20"> 
-    <div class="container">
-        <img class=" w-full m-auto "  src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/eslogan.png" alt="Eslogan">
-        <h2 class=" mt-8 text-2xl sm:text-4xl text-center">Algunos de los clientes con los que hemos trabajado</h2> 
+<?php if(!is_page('1ra-feria-digital-mama')){?>
+    <div class="slogan pt-20"> 
+        <div class="container">
+            <img class=" w-full m-auto "  src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/eslogan.png" alt="Eslogan">
+            <h2 class=" mt-8 text-2xl sm:text-4xl text-center">Algunos de los clientes con los que hemos trabajado</h2> 
+        </div>
     </div>
-</div>
 
-<div class="clients pt-10 sm:pt-20 mb-10 <?php if(is_front_page()){echo ' mb-10 sm:mb-40';}else{echo 'mb-10';} ?>">
-    <div class="conatainer"> 
-        <img class="w-full max-w-5xl m-auto"  src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/Screen-Shot-2020-04-13-at-7.40.04-PM.png" alt="">
+    <div class="clients pt-10 sm:pt-20 mb-10 <?php if(is_front_page()){echo ' mb-10 sm:mb-40';}else{echo 'mb-10';} ?>">
+        <div class="conatainer"> 
+            <img class="w-full max-w-5xl m-auto"  src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/Screen-Shot-2020-04-13-at-7.40.04-PM.png" alt="">
+        </div>
     </div>
-</div>
+<?php } ?>  
+
 <footer  class="footer bg-secondary-500" >
     <div class="container m-auto pt-6 pb-16 sm:py-6"> 
         <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-2 row-gap-8">

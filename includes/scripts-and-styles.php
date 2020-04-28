@@ -19,10 +19,10 @@ add_action( 'wp_enqueue_scripts', function () {
 
 	// Api rest
 
-	// wp_localize_script( 'app', 'ajax_cursos', array(
-    //     'url'    => rest_url( '/cursos/destacados' ),
-    //     'nonce'  => wp_create_nonce( 'wp_rest' ),
-    // ) );
+	wp_localize_script( 'app', 'ajax_marcas', array(
+        'url'    => rest_url( '/marcas/destacados' ),
+        'nonce'  => wp_create_nonce( 'wp_rest' ),
+    ) );
 	// wp_localize_script( 'app', 'ajax_congresos', array(
     //     'url'    => rest_url( '/congresos/destacados' ),
     //     'nonce'  => wp_create_nonce( 'wp_rest' ),
