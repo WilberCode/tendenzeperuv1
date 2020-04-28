@@ -12,7 +12,7 @@ get_header();?>
                 </code> -->
 <div class="celebration">
     <div class="celebration-banner bg-white">
-        <?php echo do_shortcode('[metaslider id="108"]'); ?>
+        <?php echo do_shortcode('[metaslider id="137"]'); ?>
     </div>  
 </div>
 
