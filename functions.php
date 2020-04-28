@@ -72,9 +72,9 @@ function get_marcas($request){
 			$data[$i]['link']           =   get_the_permalink(); 
 			$i++;
 		}
-		// Return the data
+		// Return the data 
 		return $data;
-	}else{
+	}else{ 
 		return [];
 	}
 }
