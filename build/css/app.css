@@ -17358,6 +17358,16 @@ code {
   border-left: 8px solid #ffd1cc;
 }
 
+.marca-card-image img {
+  max-width: 140px;
+}
+
+@media (max-width: 640px) {
+  .marca-card-image img {
+    max-width: 100px !important;
+  }
+}
+
 .marca-modal {
   width: 100%;
   height: 100%;

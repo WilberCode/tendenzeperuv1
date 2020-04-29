@@ -28,6 +28,12 @@
             border-bottom: 10px solid #ffd1cc;
             border-right: 8px solid #ffd1cc;
             border-left: 8px solid #ffd1cc ;
+            img{
+                max-width: 145px;
+                @screen maxsm{
+                    max-width: 100px !important;
+                }
+            }
         }
     }
 
