@@ -64,7 +64,7 @@ get_header();?>
                  while( $the_query->have_posts() ) :$the_query->the_post(); ?>   
                        <div class="block marca-card" data="<?php the_ID();  ?>" >
                              <div  class="marca-card-image flex justify-center items-center h-56 sm:h-65 p-4 " >
-                                 <img  class="w-full" style="max-width: 140px;"  src=" <?php  echo thumbnail_image_url('full');  ?>" >  
+                                 <img  class="w-full"   src=" <?php  echo thumbnail_image_url('full');  ?>" >  
                              </div>
                             <h2  class="text-lg font-medium text-secondary-300 mt-2 " >Ver Regalos</h2>
                         </div> 
