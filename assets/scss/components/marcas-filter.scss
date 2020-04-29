@@ -16,6 +16,10 @@
     } 
     &-category-active{
         color: #c9d151 !important ;
+        a{ 
+            color: inherit;
+
+        } 
     }
     &-card{
         cursor: pointer;
@@ -28,13 +32,10 @@
     }
 
     &-modal{
-        @apply w-full pt-32 h-full h-screen fixed flex justify-center z-50 top-0 left-0 right-0 bottom-0 hidden ; 
+        @apply w-full pt-26 h-full h-screen fixed flex justify-center z-50 top-0 left-0 right-0 bottom-0 hidden ; 
         background: rgba($color: white, $alpha: 0.8); 
         &-body{ 
-            border-top: .7em solid #ffd1cc;
-            border-bottom: .7em solid #ffd1cc;
-            border-right: .6em solid #ffd1cc;
-            border-left: .6em solid #ffd1cc ; 
+            border: .8em solid #ffd1cc; 
             @apply  w-full max-w-5xl py-16 px-10 m-auto bg-white relative ; 
             @screen maxmd{
                 @apply  px-8 ; 

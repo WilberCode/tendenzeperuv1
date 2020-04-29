@@ -106,12 +106,12 @@ var tagName = document.getElementsByTagName.bind(document);
 
 function menuMobile() {
   var mobileNav = Id('mobile-nav-wrap');
+  var navToggle = Id('nav-toggle');
   $('#nav-toggle').on('click', function () {
     navToggle.classList.toggle('nav-toggle-active');
     mobileNav.classList.toggle('nav-active');
   });
   $('#mobile-menu li').on('click', function () {
-    console.log('hola li');
     navToggle.classList.toggle('nav-toggle-active');
     mobileNav.classList.toggle('nav-active');
   });

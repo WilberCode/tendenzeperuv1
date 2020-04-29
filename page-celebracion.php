@@ -12,7 +12,15 @@ get_header();?>
                 </code> -->
 <div class="celebration">
     <div class="celebration-banner bg-white">
-        <?php echo do_shortcode('[metaslider id="137"]'); ?>
+        <?php $file = './tailwind-example.js';?>  
+             <?php   
+
+                if (file_exists(dirname(__FILE__) . $file)) {  
+                    echo do_shortcode('[metaslider id="137"]');
+                }else{
+                    echo do_shortcode('[metaslider id="113"]');
+                }
+                ?> 
     </div>  
 </div>
 
