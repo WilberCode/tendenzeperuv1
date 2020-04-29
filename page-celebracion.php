@@ -16,9 +16,9 @@ get_header();?>
              <?php   
 
                 if (file_exists(dirname(__FILE__) . $file)) {  
-                    echo do_shortcode('[metaslider id="137"]');
-                }else{
                     echo do_shortcode('[metaslider id="113"]');
+                }else{
+                    echo do_shortcode('[metaslider id="137"]');
                 }
                 ?> 
     </div>  
