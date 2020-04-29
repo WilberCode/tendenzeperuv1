@@ -89,7 +89,7 @@ get_header();?>
                             de la marca. Lo que la diferencia.</p>
                             <p class="text-base sm:text-lg">Aquí irían condiciones de la marca. Como de
                             envio, de procesos. Algo que destacar.</p>
-                            <h2  class="text-lg sm:text-xl font-bold mt-20" >¿Dónde comprar?
+                            <h2  class="text-lg sm:text-xl font-bold mt-10 sm:mt-20" >¿Dónde comprar?
                             </h2>
                             <p class="text-lg sm:text-xl" >Dirección 1 - web <br>
                             Dirección 2 - facebook <br>
@@ -97,7 +97,7 @@ get_header();?>
                             Teléfono</p>
                         </div>
                         <div>
-                           <img  class="mt-10" src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/iStock-1143611754.jpg" alt="">
+                           <img  class="mt-6 sm:mt-10" src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/iStock-1143611754.jpg" alt="">
                            <img  class="mt-3" src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/iStock-1097629546.jpg" alt="">
                            <img  class="mt-3" src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/iStock-1097629546.jpg" alt="">
                         </div>  
