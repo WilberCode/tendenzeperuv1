@@ -34,6 +34,9 @@
     &-modal{
         @apply w-full pt-26 h-full h-screen fixed flex justify-center z-50 top-0 left-0 right-0 bottom-0 hidden ; 
         background: rgba($color: white, $alpha: 0.8); 
+        @screen maxmd{
+            @apply  pt-10 ; 
+        }
         &-body{ 
             border: .8em solid #ffd1cc; 
             @apply  w-full max-w-5xl py-16 px-10 m-auto bg-white relative ; 

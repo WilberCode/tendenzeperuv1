@@ -5,6 +5,7 @@
  */
 
 get_header();?>
+<?php $file = './tailwind.js';?>  
  <!-- <code> 
                     <pre>
                     <?php // print_r($categories);?>
@@ -12,11 +13,11 @@ get_header();?>
                 </code> -->
 <div class="celebration">
     <div class="celebration-banner bg-white">
-        <?php $file = './tailwind-example.js';?>  
+        
              <?php   
 
                 if (file_exists(dirname(__FILE__) . $file)) {  
-                    echo do_shortcode('[metaslider id="113"]');
+                    echo do_shortcode('[metaslider id="108"]');
                 }else{
                     echo do_shortcode('[metaslider id="137"]');
                 }
@@ -36,10 +37,10 @@ get_header();?>
                     'option_all' => 'All'
                 );  
                 $categories = get_categories($cat_args);
-                $i = 0?> 
+                $i = 1?> 
                 <?php   foreach($categories as $cat):?>
-                    <?php if($i++ == 0){ echo ""; }else{ echo "/";} ?>
-                    <li class="marca-category-filter" > <a data-category ="<?= $cat->slug ?>" href="<?= get_category_link($cat->term_id); ?>"> <?= $cat->name;?></a> </li> 
+                  
+                    <li class="marca-category-filter" >   <a data-category ="<?= $cat->slug ?>" href="<?= get_category_link($cat->term_id); ?>"> <?= $cat->name;?></a> <?php if($i== 6){ echo ""; }else{ echo "/";} ?> </li> 
                     <?php 
                      $i++; 
                       ?>
