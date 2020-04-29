@@ -1,8 +1,8 @@
 let filterMarcas = ($)=>{
     $('.marca-category-filter > a').on('click', function(e){ 
         e.preventDefault();
-        let category = $(this).data('category');   
-        let html_course = '';  
+        let category = $(this).data('categorymarca');   
+        let html_marca = '';  
         const headers = new Headers({
             'Content-Type': 'application/json',
             'X-WP-Nonce': ajax_marcas.nonce
@@ -17,7 +17,7 @@ let filterMarcas = ($)=>{
             return response.ok ? response.json() : 'No hay marcas...'; 
         }).then(json_response => {  
             json_response.map((post)=>{  
-                html_course += `   
+                html_marca += `   
                                    <div class="block marca-card" >
                                         <div  class="marca-card-image flex justify-center items-center h-56 sm:h-65 p-4 " >
                                             <img  class="w-full" style="max-width: 140px;"  src=" ${post.thumbnail}" alt="${post.link}" >  
@@ -26,9 +26,9 @@ let filterMarcas = ($)=>{
                                     </div>  
                                   `;   
             })
-            $('#marca-grid').html(html_course); 
+            $('#marca-grid').html(html_marca); 
         }) 
-}) 
+    }) 
 }
 
 export default filterMarcas

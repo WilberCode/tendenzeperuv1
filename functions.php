@@ -70,6 +70,8 @@ function get_marcas($request){
 			$data[$i]['title']          =   get_the_title(); 
 			$data[$i]['thumbnail']      =   get_the_post_thumbnail_url(get_the_ID(), 'full');
 			$data[$i]['link']           =   get_the_permalink(); 
+			$data[$i]['informations']	=   get_field('marca_informacion');
+			$data[$i]['images']			=   get_field('marca_imagenes'); 
 			$i++;
 		}
 		// Return the data 

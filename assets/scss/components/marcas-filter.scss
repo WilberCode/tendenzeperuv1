@@ -40,10 +40,10 @@
     &-modal{
         @apply w-full  h-full absolute flex justify-center z-50 top-0 left-0 right-0 bottom-0 hidden ; 
         background: rgba($color: white, $alpha: 0.8); 
-        height: 366vh;
+        height: 380vh;
         padding-top: 58em;
         @screen maxmd{
-            @apply  pt-10 ; 
+            @apply  pt-32 ; 
         }
         &-body{ 
             border: .8em solid #ffd1cc; 
@@ -56,12 +56,54 @@
             position: absolute;
             right:25px;
             top: 18px;
-            font-size: 30px;
+            font-size: 35px;
             @apply font-medium ;
             cursor: pointer;
         }
         &-active{
             display: block;
+        }
+        &-info{
+            h1,h2,h3{
+                @apply font-bold;  
+            }
+            h1{
+                @screen maxmd{
+                    @apply text-lg;
+                    br{
+                        @apply hidden ; 
+
+                    }
+                }
+            }
+            h2{
+                @screen maxmd{
+                    @apply text-base ;
+                    br{
+                        @apply hidden ; 
+
+                    }
+                }
+            }
+            h3{
+                @screen maxmd{
+                    br{
+                        @apply hidden ; 
+
+                    }
+                    @apply text-sm ;
+                }
+            }
+            p{
+                @apply text-xl ; 
+                @screen maxmd{  
+                    // br{
+                    //     @apply hidden ; 
+
+                    // }
+                     @apply text-base ; 
+                }
+            }
         }
     }
     

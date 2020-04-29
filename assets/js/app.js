@@ -1,8 +1,9 @@
  
 // import './materialize/materialize.min.js'
-import './components/posts'
+
  
 var $ = jQuery.noConflict();
+import './components/posts'
 // Shorthand 
 const Id = document.getElementById.bind(document)
 const className = document.getElementsByClassName.bind(document)
@@ -52,6 +53,47 @@ function activeCategory(){
         $(this).toggleClass('marca-category-active') 
     })
 }
+function activeModalMarca(){
+    $('.marca-card').on('click', function(e){
+        e.preventDefault() 
+        $('#marca-modal').toggleClass('marca-modal-active')
+            
+            e.preventDefault();
+            let postIdMarca = $(this).data('postidmarca');  
+            let html_marca_modal_info = '';  
+            const headers = new Headers({
+                'Content-Type': 'application/json',
+                'X-WP-Nonce': ajax_marcas.nonce
+            }); 
+            fetch(`${ajax_marcas.url}/?post_id=${postIdMarca}`, {
+                method: 'get',
+                headers: headers,
+                credentials: 'same-origin'
+            })
+            .then(response => {  
+                return response.ok ? response.json() : 'No información de la marca...'; 
+            }).then(json_response => {  
+                if(json_response){
+                    json_response.map((post)=>{   
+                        html_marca_modal_info += `   
+                        <div  class="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10">
+                            <div  class="pr-0 sm:pr-6" > 
+                                <img  class=" w-20 mb-10 sm:w-auto "  src="${post.thumbnail}" alt="${post.title}">
+                                ${post.informations == null?'':post.informations.map((info)=>` ${info.marca_informacion_individual} `).join('')}
+
+                            </div>
+                            <div>  
+                            
+                                ${post.images == null?'':post.images.map((image)=>`<img class="mb-4" src="${image.marca_imagenes_individual}" />`).join('')}
+                              </div>  
+                        </div>
+                         `;   
+                    }) 
+                }
+                $('#marca-modal-info').html(html_marca_modal_info); 
+            }) 
+     })  
+}
 
 jQuery(function ($) {  
     $(document).ready(function () {  
@@ -59,16 +101,22 @@ jQuery(function ($) {
         separateFirstText() // Card title: serate the first word in a span 
         showVideos()        // Button show the videos
         activeCategory()    // Active color of categories
-
-        $('.marca-card').on('click', function(e){
-            e.preventDefault()
-            console.log($(this))
-            $('#marca-modal').toggleClass('marca-modal-active')
-        })
+        activeModalMarca()  // Active Modal of marca
+       
         $('.marca-modal-close').on('click', function(e){ 
             $('#marca-modal').removeClass('marca-modal-active')
         })
-
+        // $('#marca-modal').on('click', function(e){  
+        //     const parentID = e.target.parentNode.id 
+        //     console.log(parentID )
+        //     console.log($(this) )
+        //      if (parentID !== 'marca-modal-body' && e.target.id !== 'marca-modal-body' ) {
+        //         $('#marca-modal').removeClass('marca-modal-active')
+        //     } else {
+        //         return;
+        //     }
+           
+        // })
     });  
 });
  

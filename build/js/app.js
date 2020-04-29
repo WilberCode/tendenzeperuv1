@@ -97,8 +97,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_posts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/posts */ "./assets/js/components/posts.js");
 // import './materialize/materialize.min.js'
-
-var $ = jQuery.noConflict(); // Shorthand 
+var $ = jQuery.noConflict();
+ // Shorthand 
 
 var Id = document.getElementById.bind(document);
 var className = document.getElementsByClassName.bind(document);
@@ -148,6 +148,39 @@ function activeCategory() {
   });
 }
 
+function activeModalMarca() {
+  $('.marca-card').on('click', function (e) {
+    e.preventDefault();
+    $('#marca-modal').toggleClass('marca-modal-active');
+    e.preventDefault();
+    var postIdMarca = $(this).data('postidmarca');
+    var html_marca_modal_info = '';
+    var headers = new Headers({
+      'Content-Type': 'application/json',
+      'X-WP-Nonce': ajax_marcas.nonce
+    });
+    fetch("".concat(ajax_marcas.url, "/?post_id=").concat(postIdMarca), {
+      method: 'get',
+      headers: headers,
+      credentials: 'same-origin'
+    }).then(function (response) {
+      return response.ok ? response.json() : 'No información de la marca...';
+    }).then(function (json_response) {
+      if (json_response) {
+        json_response.map(function (post) {
+          html_marca_modal_info += "   \n                        <div  class=\"grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10\">\n                            <div  class=\"pr-0 sm:pr-6\" > \n                                <img  class=\" w-20 mb-10 sm:w-auto \"  src=\"".concat(post.thumbnail, "\" alt=\"").concat(post.title, "\">\n                                ").concat(post.informations == null ? '' : post.informations.map(function (info) {
+            return " ".concat(info.marca_informacion_individual, " ");
+          }).join(''), "\n\n                            </div>\n                            <div>  \n                            \n                                ").concat(post.images == null ? '' : post.images.map(function (image) {
+            return "<img class=\"mb-4\" src=\"".concat(image.marca_imagenes_individual, "\" />");
+          }).join(''), "\n                              </div>  \n                        </div>\n                         ");
+        });
+      }
+
+      $('#marca-modal-info').html(html_marca_modal_info);
+    });
+  });
+}
+
 jQuery(function ($) {
   $(document).ready(function () {
     menuMobile(); // Menu Mobile: Show menu and hide 
@@ -158,14 +191,20 @@ jQuery(function ($) {
 
     activeCategory(); // Active color of categories
 
-    $('.marca-card').on('click', function (e) {
-      e.preventDefault();
-      console.log($(this));
-      $('#marca-modal').toggleClass('marca-modal-active');
-    });
+    activeModalMarca(); // Active Modal of marca
+
     $('.marca-modal-close').on('click', function (e) {
       $('#marca-modal').removeClass('marca-modal-active');
-    });
+    }); // $('#marca-modal').on('click', function(e){  
+    //     const parentID = e.target.parentNode.id 
+    //     console.log(parentID )
+    //     console.log($(this) )
+    //      if (parentID !== 'marca-modal-body' && e.target.id !== 'marca-modal-body' ) {
+    //         $('#marca-modal').removeClass('marca-modal-active')
+    //     } else {
+    //         return;
+    //     }
+    // })
   });
 });
 
@@ -183,8 +222,8 @@ __webpack_require__.r(__webpack_exports__);
 var filterMarcas = function filterMarcas($) {
   $('.marca-category-filter > a').on('click', function (e) {
     e.preventDefault();
-    var category = $(this).data('category');
-    var html_course = '';
+    var category = $(this).data('categorymarca');
+    var html_marca = '';
     var headers = new Headers({
       'Content-Type': 'application/json',
       'X-WP-Nonce': ajax_marcas.nonce
@@ -198,9 +237,9 @@ var filterMarcas = function filterMarcas($) {
       return response.ok ? response.json() : 'No hay marcas...';
     }).then(function (json_response) {
       json_response.map(function (post) {
-        html_course += "   \n                                   <div class=\"block marca-card\" >\n                                        <div  class=\"marca-card-image flex justify-center items-center h-56 sm:h-65 p-4 \" >\n                                            <img  class=\"w-full\" style=\"max-width: 140px;\"  src=\" ".concat(post.thumbnail, "\" alt=\"").concat(post.link, "\" >  \n                                        </div>\n                                        <h2  class=\"text-lg font-medium text-secondary-300 mt-2 \" >Ver Regalos</h2>\n                                    </div>  \n                                  ");
+        html_marca += "   \n                                   <div class=\"block marca-card\" >\n                                        <div  class=\"marca-card-image flex justify-center items-center h-56 sm:h-65 p-4 \" >\n                                            <img  class=\"w-full\" style=\"max-width: 140px;\"  src=\" ".concat(post.thumbnail, "\" alt=\"").concat(post.link, "\" >  \n                                        </div>\n                                        <h2  class=\"text-lg font-medium text-secondary-300 mt-2 \" >Ver Regalos</h2>\n                                    </div>  \n                                  ");
       });
-      $('#marca-grid').html(html_course);
+      $('#marca-grid').html(html_marca);
     });
   });
 };

@@ -40,7 +40,7 @@ get_header();?>
                 $i = 1?> 
                 <?php   foreach($categories as $cat):?>
                   
-                    <li class="marca-category-filter" >   <a data-category ="<?= $cat->slug ?>" href="<?= get_category_link($cat->term_id); ?>"> <?= $cat->name;?></a> <?php if($i== 6){ echo ""; }else{ echo "/";} ?> </li> 
+                    <li class="marca-category-filter" >   <a data-categorymarca ="<?= $cat->slug ?>" href="<?= get_category_link($cat->term_id); ?>"> <?= $cat->name;?></a> <?php if($i== 6){ echo ""; }else{ echo "/";} ?> </li> 
                     <?php 
                      $i++; 
                       ?>
@@ -62,7 +62,7 @@ get_header();?>
                $the_query = new WP_Query( $args );  
                 if( $the_query->have_posts() ): 
                  while( $the_query->have_posts() ) :$the_query->the_post(); ?>   
-                       <div class="block marca-card" data="<?php the_ID();  ?>" >
+                       <div class="marca-card" data-postidMarca="<?php the_ID(); ?>" >
                              <div  class="marca-card-image flex justify-center items-center h-56 sm:h-65 p-4 " >
                                  <img  class="w-full"   src=" <?php  echo thumbnail_image_url('full');  ?>" >  
                              </div>
@@ -79,36 +79,34 @@ get_header();?>
         <div class="marca-modal"  id="marca-modal" > 
             <div class="marca-modal-body" id="marca-modal-body" >
                 <span  class="marca-modal-close">X</span>
-                <div class="marca-modal-info" id="marca-modal-info"> 
-                   <div  class="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-20 " >
-                        <div>
-                            <img  class=" w-20 sm:w-auto "  src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/corazon.png" alt="">
-                            <p  class=" text-lg sm:text-2xl sm:mt-32 pt-12 " >Aquí una reseña de lo que es la marca.
-                            Que estilo de regalos y qué variedad
-                            pueden encontrar. Lo más destacado
-                            de la marca. Lo que la diferencia.</p>
-                            <p class="text-base sm:text-lg">Aquí irían condiciones de la marca. Como de
-                            envio, de procesos. Algo que destacar.</p>
-                            <h2  class="text-lg sm:text-xl font-bold mt-10 sm:mt-20" >¿Dónde comprar?
-                            </h2>
-                            <p class="text-lg sm:text-xl" >Dirección 1 - web <br>
-                            Dirección 2 - facebook <br>
-                            Dirección 3 - instagram <br>
-                            Teléfono</p>
-                        </div>
-                        <div>
-                           <img  class="mt-6 sm:mt-10" src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/iStock-1143611754.jpg" alt="">
-                           <img  class="mt-3" src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/iStock-1097629546.jpg" alt="">
-                           <img  class="mt-3" src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/iStock-1097629546.jpg" alt="">
-                        </div>  
+                <div class="marca-modal-info" id="marca-modal-info">  
                 </div>
-            </div>
-        </div>
-          <!-- End - Grid Marcas-->
-   </div>     
+            </div> 
+        </div>     
+  </div>
  </div>
- </div>
-
+ <!-- <div  class="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-20 " >
+    <div>
+        <img  class=" w-20 sm:w-auto "  src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/corazon.png" alt="">
+        <p  class=" text-lg sm:text-2xl sm:mt-32 pt-12 " >Aquí una reseña de lo que es la marca.
+        Que estilo de regalos y qué variedad
+        pueden encontrar. Lo más destacado
+        de la marca. Lo que la diferencia.</p>
+        <p class="text-base sm:text-lg">Aquí irían condiciones de la marca. Como de
+        envio, de procesos. Algo que destacar.</p>
+        <h2  class="text-lg sm:text-xl font-bold mt-10 sm:mt-20" >¿Dónde comprar?
+        </h2>
+        <p class="text-lg sm:text-xl" >Dirección 1 - web <br>
+        Dirección 2 - facebook <br>
+        Dirección 3 - instagram <br>
+        Teléfono</p>
+    </div>
+    <div>
+        <img  class="mt-6 sm:mt-10" src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/iStock-1143611754.jpg" alt="">
+        <img  class="mt-3" src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/iStock-1097629546.jpg" alt="">
+        <img  class="mt-3" src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/iStock-1097629546.jpg" alt="">
+    </div>  
+</div> -->
 
 
 <div class="h-20" >

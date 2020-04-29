@@ -17872,13 +17872,13 @@ code {
   bottom: 0;
   display: none;
   background: rgba(255, 255, 255, 0.8);
-  height: 366vh;
+  height: 380vh;
   padding-top: 58em;
 }
 
 @media (max-width: 768px) {
   .marca-modal {
-    padding-top: 2.5rem;
+    padding-top: 8rem;
   }
 }
 
@@ -17906,13 +17906,57 @@ code {
   position: absolute;
   right: 25px;
   top: 18px;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 500;
   cursor: pointer;
 }
 
 .marca-modal-active {
   display: block;
+}
+
+.marca-modal-info h1, .marca-modal-info h2, .marca-modal-info h3 {
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .marca-modal-info h1 {
+    font-size: 1.125rem;
+  }
+
+  .marca-modal-info h1 br {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .marca-modal-info h2 {
+    font-size: 1rem;
+  }
+
+  .marca-modal-info h2 br {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .marca-modal-info h3 {
+    font-size: 0.875rem;
+  }
+
+  .marca-modal-info h3 br {
+    display: none;
+  }
+}
+
+.marca-modal-info p {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .marca-modal-info p {
+    font-size: 1rem;
+  }
 }
 
 .header {
