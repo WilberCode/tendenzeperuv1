@@ -80,18 +80,18 @@ get_header();?>
             <div class="marca-modal-body" id="marca-modal-body" >
                 <span  class="marca-modal-close">X</span>
                 <div class="marca-modal-info" id="marca-modal-info"> 
-                   <div  class="grid grid-cols-1 sm:grid-cols-2  gap-16 " >
+                   <div  class="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-20 " >
                         <div>
-                            <img src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/corazon.png" alt="">
-                            <p  class="text-xl sm:mt-32 pt-10" >Aquí una reseña de lo que es la marca.
+                            <img  class=" w-20 sm:w-auto "  src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/corazon.png" alt="">
+                            <p  class=" text-lg sm:text-2xl sm:mt-32 pt-12 " >Aquí una reseña de lo que es la marca.
                             Que estilo de regalos y qué variedad
                             pueden encontrar. Lo más destacado
                             de la marca. Lo que la diferencia.</p>
-                            <p class="text-lg">Aquí irían condiciones de la marca. Como de
+                            <p class="text-base sm:text-lg">Aquí irían condiciones de la marca. Como de
                             envio, de procesos. Algo que destacar.</p>
-                            <h2  class="text-lg font-bold" >¿Dónde comprar?
+                            <h2  class="text-lg sm:text-xl font-bold mt-20" >¿Dónde comprar?
                             </h2>
-                            <p class="text-xl" >Dirección 1 - web <br>
+                            <p class="text-lg sm:text-xl" >Dirección 1 - web <br>
                             Dirección 2 - facebook <br>
                             Dirección 3 - instagram <br>
                             Teléfono</p>

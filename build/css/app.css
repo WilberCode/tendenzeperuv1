@@ -17360,10 +17360,8 @@ code {
 
 .marca-modal {
   width: 100%;
-  padding-top: 7rem;
   height: 100%;
-  height: 100vh;
-  position: fixed;
+  position: absolute;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
@@ -17375,6 +17373,8 @@ code {
   bottom: 0;
   display: none;
   background: rgba(255, 255, 255, 0.8);
+  height: 366vh;
+  padding-top: 42em;
 }
 
 @media (max-width: 768px) {
@@ -17389,8 +17389,8 @@ code {
   max-width: 64rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   margin: auto;
   background-color: #fff;
   position: relative;
@@ -17408,7 +17408,7 @@ code {
   right: 25px;
   top: 18px;
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
 }
 
