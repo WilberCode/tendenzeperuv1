@@ -250,7 +250,7 @@ var modalMarca = function modalMarca($) {
         json_response.map(function (post) {
           html_marca_modal_info += "   \n                        <div  class=\"grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10\">\n                            <div>   \n                                ".concat(post.images == null ? '' : post.images.map(function (image) {
             return "<img class=\"mb-4\" src=\"".concat(image.marca_imagenes_individual, "\" />");
-          }).join(''), "\n                            </div>  \n                            <div  class=\"pl-0 sm:pl-6\"> \n                                <img  class=\" w-32 mb-10 md:w-40 sm:w-59 \"  src=\"").concat(post.thumbnail, "\" alt=\"").concat(post.title, "\">\n                                 ").concat(post.content, " \n                            </div>\n                            \n                        </div>\n                         ");
+          }).join(''), "\n                            </div>  \n                            <div  class=\"pl-0 sm:pl-6\"> \n                                <img  class=\" w-34 mb-10 md:w-40 sm:w-56 \"  src=\"").concat(post.thumbnail, "\" alt=\"").concat(post.title, "\">\n                                 ").concat(post.content, " \n                            </div>\n                            \n                        </div>\n                         ");
         });
       }
 

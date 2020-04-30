@@ -8,7 +8,7 @@
                         Directora de cuentas <br>
                         & estrategia</h3>
                 </div>
-                <img class="foundress-avatar  rounded-full " src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/Screen-Shot-2020-04-15-at-6.01.24-PM.png" alt="">
+                <img class="foundress-avatar  rounded-full " src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/martina.jpg" alt="">
             </div>
             <div class="flex justify-start items-center" >
                 <img class="foundress-avatar  rounded-full " src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/karina.jpg" alt="">
