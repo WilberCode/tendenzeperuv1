@@ -78,7 +78,7 @@ function activeModalMarca(){
                         html_marca_modal_info += `   
                         <div  class="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10">
                             <div  class="pr-0 sm:pr-6" > 
-                                <img  class=" w-24 mb-10 md:w-40 sm:w-58 "  src="${post.thumbnail}" alt="${post.title}">
+                                <img  class=" w-32 mb-10 md:w-40 sm:w-59 "  src="${post.thumbnail}" alt="${post.title}">
                                  ${post.content} 
                             </div>
                             <div>   

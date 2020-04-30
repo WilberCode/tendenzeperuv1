@@ -168,7 +168,7 @@ function activeModalMarca() {
     }).then(function (json_response) {
       if (json_response) {
         json_response.map(function (post) {
-          html_marca_modal_info += "   \n                        <div  class=\"grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10\">\n                            <div  class=\"pr-0 sm:pr-6\" > \n                                <img  class=\" w-24 mb-10 md:w-40 sm:w-58 \"  src=\"".concat(post.thumbnail, "\" alt=\"").concat(post.title, "\">\n                                 ").concat(post.content, " \n                            </div>\n                            <div>   \n                                ").concat(post.images == null ? '' : post.images.map(function (image) {
+          html_marca_modal_info += "   \n                        <div  class=\"grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10\">\n                            <div  class=\"pr-0 sm:pr-6\" > \n                                <img  class=\" w-32 mb-10 md:w-40 sm:w-59 \"  src=\"".concat(post.thumbnail, "\" alt=\"").concat(post.title, "\">\n                                 ").concat(post.content, " \n                            </div>\n                            <div>   \n                                ").concat(post.images == null ? '' : post.images.map(function (image) {
             return "<img class=\"mb-4\" src=\"".concat(image.marca_imagenes_individual, "\" />");
           }).join(''), "\n                              </div>  \n                        </div>\n                         ");
         });
