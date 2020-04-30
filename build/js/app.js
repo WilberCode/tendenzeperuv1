@@ -96,8 +96,10 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_posts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/posts */ "./assets/js/components/posts.js");
+/* harmony import */ var _components_modalMarca__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/modalMarca */ "./assets/js/components/modalMarca.js");
 // import './materialize/materialize.min.js'
 var $ = jQuery.noConflict();
+
  // Shorthand 
 
 var Id = document.getElementById.bind(document);
@@ -148,7 +150,85 @@ function activeCategory() {
   });
 }
 
-function activeModalMarca() {
+jQuery(function ($) {
+  $(document).ready(function () {
+    menuMobile(); // Menu Mobile: Show menu and hide 
+
+    separateFirstText(); // Card title: serate the first word in a span 
+
+    showVideos(); // Button show the videos
+
+    activeCategory(); // Active color of categories
+
+    Object(_components_modalMarca__WEBPACK_IMPORTED_MODULE_1__["default"])($); // Active Modal of marca 
+    // $('#marca-modal').on('click', function(e){  
+    //     const parentID = e.target.parentNode.id 
+    //     console.log(parentID )
+    //     console.log($(this) )
+    //      if (parentID !== 'marca-modal-body' && e.target.id !== 'marca-modal-body' ) {
+    //         $('#marca-modal').removeClass('marca-modal-active')
+    //     } else {
+    //         return;
+    //     }
+    // })
+  });
+});
+
+/***/ }),
+
+/***/ "./assets/js/components/filterMarcas.js":
+/*!**********************************************!*\
+  !*** ./assets/js/components/filterMarcas.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modalMarca__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modalMarca */ "./assets/js/components/modalMarca.js");
+
+
+var filterMarcas = function filterMarcas($) {
+  $('.marca-category-filter > a').on('click', function (e) {
+    e.preventDefault();
+    var category = $(this).data('categorymarca');
+    var html_marca = '';
+    var headers = new Headers({
+      'Content-Type': 'application/json',
+      'X-WP-Nonce': ajax_marcas.nonce
+    });
+    var category_url = $(this)[0].id === 'marca-todos' ? '' : "?category=".concat(category);
+    fetch("".concat(ajax_marcas.url, "/").concat(category_url), {
+      method: 'get',
+      headers: headers,
+      credentials: 'same-origin'
+    }).then(function (response) {
+      return response.ok ? response.json() : 'No hay marcas...';
+    }).then(function (json_response) {
+      json_response.map(function (post) {
+        html_marca += "   \n                                   <div class=\"marca-card\" data-postidmarca=\"".concat(post.id, "\" >\n                                        <div  class=\"marca-card-image flex justify-center items-center h-56 sm:h-65 p-4 \" >\n                                            <img  class=\"w-full\" style=\"max-width: 140px;\"  src=\" ").concat(post.thumbnail, "\" alt=\"").concat(post.link, "\" >  \n                                        </div>\n                                        <h2  class=\"text-lg font-medium text-secondary-300 mt-2 \" >Ver Regalos</h2>\n                                    </div>  \n                                  ");
+      });
+      $('#marca-grid').html(html_marca); // Modal
+
+      Object(_modalMarca__WEBPACK_IMPORTED_MODULE_0__["default"])($);
+    });
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (filterMarcas);
+
+/***/ }),
+
+/***/ "./assets/js/components/modalMarca.js":
+/*!********************************************!*\
+  !*** ./assets/js/components/modalMarca.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var modalMarca = function modalMarca($) {
   $('.marca-card').on('click', function (e) {
     e.preventDefault();
     $('#marca-modal').toggleClass('marca-modal-active');
@@ -177,101 +257,12 @@ function activeModalMarca() {
       $('#marca-modal-info').html(html_marca_modal_info);
     });
   });
-}
-
-jQuery(function ($) {
-  $(document).ready(function () {
-    menuMobile(); // Menu Mobile: Show menu and hide 
-
-    separateFirstText(); // Card title: serate the first word in a span 
-
-    showVideos(); // Button show the videos
-
-    activeCategory(); // Active color of categories
-
-    activeModalMarca(); // Active Modal of marca
-
-    $('.marca-modal-close').on('click', function (e) {
-      $('#marca-modal').removeClass('marca-modal-active');
-    }); // $('#marca-modal').on('click', function(e){  
-    //     const parentID = e.target.parentNode.id 
-    //     console.log(parentID )
-    //     console.log($(this) )
-    //      if (parentID !== 'marca-modal-body' && e.target.id !== 'marca-modal-body' ) {
-    //         $('#marca-modal').removeClass('marca-modal-active')
-    //     } else {
-    //         return;
-    //     }
-    // })
-  });
-});
-
-/***/ }),
-
-/***/ "./assets/js/components/filterMarcas.js":
-/*!**********************************************!*\
-  !*** ./assets/js/components/filterMarcas.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var filterMarcas = function filterMarcas($) {
-  $('.marca-category-filter > a').on('click', function (e) {
-    e.preventDefault();
-    var category = $(this).data('categorymarca');
-    var html_marca = '';
-    var headers = new Headers({
-      'Content-Type': 'application/json',
-      'X-WP-Nonce': ajax_marcas.nonce
-    });
-    var category_url = $(this)[0].id === 'marca-todos' ? '' : "?category=".concat(category);
-    fetch("".concat(ajax_marcas.url, "/").concat(category_url), {
-      method: 'get',
-      headers: headers,
-      credentials: 'same-origin'
-    }).then(function (response) {
-      return response.ok ? response.json() : 'No hay marcas...';
-    }).then(function (json_response) {
-      json_response.map(function (post) {
-        html_marca += "   \n                                   <div class=\"marca-card\" data-postidmarca=\"".concat(post.id, "\" >\n                                        <div  class=\"marca-card-image flex justify-center items-center h-56 sm:h-65 p-4 \" >\n                                            <img  class=\"w-full\" style=\"max-width: 140px;\"  src=\" ").concat(post.thumbnail, "\" alt=\"").concat(post.link, "\" >  \n                                        </div>\n                                        <h2  class=\"text-lg font-medium text-secondary-300 mt-2 \" >Ver Regalos</h2>\n                                    </div>  \n                                  ");
-      });
-      $('#marca-grid').html(html_marca); // Modal
-
-      $('.marca-card').on('click', function (e) {
-        e.preventDefault();
-        $('#marca-modal').toggleClass('marca-modal-active');
-        e.preventDefault();
-        var postIdMarca = $(this).data('postidmarca');
-        var html_marca_modal_info = '';
-        var headers = new Headers({
-          'Content-Type': 'application/json',
-          'X-WP-Nonce': ajax_marcas.nonce
-        });
-        fetch("".concat(ajax_marcas.url, "/?post_id=").concat(postIdMarca), {
-          method: 'get',
-          headers: headers,
-          credentials: 'same-origin'
-        }).then(function (response) {
-          return response.ok ? response.json() : 'No información de la marca...';
-        }).then(function (json_response) {
-          if (json_response) {
-            json_response.map(function (post) {
-              html_marca_modal_info += "   \n                                <div  class=\"grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10\">\n                                    <div  class=\"pr-0 sm:pr-6\" > \n                                        <img  class=\" w-32 mb-10 md:w-40 sm:w-59 \"  src=\"".concat(post.thumbnail, "\" alt=\"").concat(post.title, "\">\n                                         ").concat(post.content, " \n                                    </div>\n                                    <div>   \n                                        ").concat(post.images == null ? '' : post.images.map(function (image) {
-                return "<img class=\"mb-4\" src=\"".concat(image.marca_imagenes_individual, "\" />");
-              }).join(''), "\n                                      </div>  \n                                </div>\n                                 ");
-            });
-          }
-
-          $('#marca-modal-info').html(html_marca_modal_info);
-        });
-      });
-    });
+  $('.marca-modal-close').on('click', function (e) {
+    $('#marca-modal').removeClass('marca-modal-active');
   });
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (filterMarcas);
+/* harmony default export */ __webpack_exports__["default"] = (modalMarca);
 
 /***/ }),
 
