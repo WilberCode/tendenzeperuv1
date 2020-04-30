@@ -18084,6 +18084,7 @@ code {
 
 .marca-modal-info h1 {
   margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
 }
 
 @media (max-width: 768px) {
