@@ -13,7 +13,7 @@
             <div class="flex justify-start items-center" >
                 <img class="foundress-avatar  rounded-full " src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/karina.jpg" alt="">
                 <div  class="pl-8" >
-                        <h2 class="font-semibold text-secondary-600" >Martina Anfossi</h2>
+                        <h2 class="font-semibold text-secondary-600" >Karina Higashi</h2>
                             <h3 class="text-secondary-500 leading-6 mt-1 font-medium " >Fundadora <br>
 Directora Creativa</h3>
                 </div> 
