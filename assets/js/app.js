@@ -78,12 +78,10 @@ function activeModalMarca(){
                         html_marca_modal_info += `   
                         <div  class="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10">
                             <div  class="pr-0 sm:pr-6" > 
-                                <img  class=" w-20 mb-10 sm:w-auto "  src="${post.thumbnail}" alt="${post.title}">
-                                ${post.informations == null?'':post.informations.map((info)=>` ${info.marca_informacion_individual} `).join('')}
-
+                                <img  class=" w-24 mb-10 md:w-40 sm:w-57 "  src="${post.thumbnail}" alt="${post.title}">
+                                 ${post.content} 
                             </div>
-                            <div>  
-                            
+                            <div>   
                                 ${post.images == null?'':post.images.map((image)=>`<img class="mb-4" src="${image.marca_imagenes_individual}" />`).join('')}
                               </div>  
                         </div>

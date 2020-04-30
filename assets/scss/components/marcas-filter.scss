@@ -68,6 +68,7 @@
                 @apply font-bold;  
             }
             h1{
+                @apply mb-5 ;  
                 @screen maxmd{
                     @apply text-lg;
                     br{
@@ -77,6 +78,7 @@
                 }
             }
             h2{
+                @apply mb-4 ; 
                 @screen maxmd{
                     @apply text-base ;
                     br{
@@ -95,7 +97,7 @@
                 }
             }
             p{
-                @apply text-xl ; 
+                @apply text-xl m-0 ; 
                 @screen maxmd{  
                     // br{
                     //     @apply hidden ; 
