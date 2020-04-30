@@ -29,7 +29,7 @@
             border-right: 8px solid #ffd1cc;
             border-left: 8px solid #ffd1cc ;
             img{
-                max-width: 158px;
+                max-width: 160px;
                 @screen maxsm{
                     max-width: 100px !important;
                 }
@@ -68,6 +68,9 @@
             font-size: 30px;
             @apply font-medium ;
             cursor: pointer;
+            @screen maxsm{
+                top: 14px;
+            }
         }
         &-active{
             display: block;

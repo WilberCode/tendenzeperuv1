@@ -18500,7 +18500,7 @@ code {
 }
 
 .marca-card-image img {
-  max-width: 158px;
+  max-width: 160px;
 }
 
 @media (max-width: 640px) {
@@ -18569,6 +18569,12 @@ code {
   font-size: 30px;
   font-weight: 500;
   cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .marca-modal-close {
+    top: 14px;
+  }
 }
 
 .marca-modal-active {
