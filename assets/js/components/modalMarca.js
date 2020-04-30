@@ -22,13 +22,14 @@ let modalMarca = ($)=>{
                     json_response.map((post)=>{   
                         html_marca_modal_info += `   
                         <div  class="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10">
-                            <div  class="pr-0 sm:pr-6" > 
+                            <div>   
+                                ${post.images == null?'':post.images.map((image)=>`<img class="mb-4" src="${image.marca_imagenes_individual}" />`).join('')}
+                            </div>  
+                            <div  class="pl-0 sm:pl-6"> 
                                 <img  class=" w-32 mb-10 md:w-40 sm:w-59 "  src="${post.thumbnail}" alt="${post.title}">
                                  ${post.content} 
                             </div>
-                            <div>   
-                                ${post.images == null?'':post.images.map((image)=>`<img class="mb-4" src="${image.marca_imagenes_individual}" />`).join('')}
-                              </div>  
+                            
                         </div>
                          `;   
                     }) 
