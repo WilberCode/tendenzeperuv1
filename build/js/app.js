@@ -235,9 +235,38 @@ var filterMarcas = function filterMarcas($) {
       return response.ok ? response.json() : 'No hay marcas...';
     }).then(function (json_response) {
       json_response.map(function (post) {
-        html_marca += "   \n                                   <div class=\"block marca-card\" >\n                                        <div  class=\"marca-card-image flex justify-center items-center h-56 sm:h-65 p-4 \" >\n                                            <img  class=\"w-full\" style=\"max-width: 140px;\"  src=\" ".concat(post.thumbnail, "\" alt=\"").concat(post.link, "\" >  \n                                        </div>\n                                        <h2  class=\"text-lg font-medium text-secondary-300 mt-2 \" >Ver Regalos</h2>\n                                    </div>  \n                                  ");
+        html_marca += "   \n                                   <div class=\"marca-card\" data-postidmarca=\"".concat(post.id, "\" >\n                                        <div  class=\"marca-card-image flex justify-center items-center h-56 sm:h-65 p-4 \" >\n                                            <img  class=\"w-full\" style=\"max-width: 140px;\"  src=\" ").concat(post.thumbnail, "\" alt=\"").concat(post.link, "\" >  \n                                        </div>\n                                        <h2  class=\"text-lg font-medium text-secondary-300 mt-2 \" >Ver Regalos</h2>\n                                    </div>  \n                                  ");
       });
-      $('#marca-grid').html(html_marca);
+      $('#marca-grid').html(html_marca); // Modal
+
+      $('.marca-card').on('click', function (e) {
+        e.preventDefault();
+        $('#marca-modal').toggleClass('marca-modal-active');
+        e.preventDefault();
+        var postIdMarca = $(this).data('postidmarca');
+        var html_marca_modal_info = '';
+        var headers = new Headers({
+          'Content-Type': 'application/json',
+          'X-WP-Nonce': ajax_marcas.nonce
+        });
+        fetch("".concat(ajax_marcas.url, "/?post_id=").concat(postIdMarca), {
+          method: 'get',
+          headers: headers,
+          credentials: 'same-origin'
+        }).then(function (response) {
+          return response.ok ? response.json() : 'No información de la marca...';
+        }).then(function (json_response) {
+          if (json_response) {
+            json_response.map(function (post) {
+              html_marca_modal_info += "   \n                                <div  class=\"grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10\">\n                                    <div  class=\"pr-0 sm:pr-6\" > \n                                        <img  class=\" w-32 mb-10 md:w-40 sm:w-59 \"  src=\"".concat(post.thumbnail, "\" alt=\"").concat(post.title, "\">\n                                         ").concat(post.content, " \n                                    </div>\n                                    <div>   \n                                        ").concat(post.images == null ? '' : post.images.map(function (image) {
+                return "<img class=\"mb-4\" src=\"".concat(image.marca_imagenes_individual, "\" />");
+              }).join(''), "\n                                      </div>  \n                                </div>\n                                 ");
+            });
+          }
+
+          $('#marca-modal-info').html(html_marca_modal_info);
+        });
+      });
     });
   });
 };

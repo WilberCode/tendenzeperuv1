@@ -62,7 +62,7 @@ get_header();?>
                $the_query = new WP_Query( $args );  
                 if( $the_query->have_posts() ): 
                  while( $the_query->have_posts() ) :$the_query->the_post(); ?>   
-                       <div class="marca-card" data-postidMarca="<?php the_ID(); ?>" >
+                       <div class="marca-card" data-postidmarca="<?php the_ID(); ?>" >
                              <div  class="marca-card-image flex justify-center items-center h-56 sm:h-65 p-4 " >
                                  <img  class="w-full"   src=" <?php  echo thumbnail_image_url('full');  ?>" >  
                              </div>
