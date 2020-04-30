@@ -1,4 +1,4 @@
-<?php if(!is_page('1ra-feria-digital-mama')){?>
+ 
     <div class="slogan pt-20"> 
         <div class="container">
             <img class=" w-full m-auto "  src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/eslogan.png" alt="Eslogan">
@@ -10,8 +10,7 @@
         <div class="conatainer"> 
             <img class="w-full max-w-5xl m-auto"  src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/Screen-Shot-2020-04-13-at-7.40.04-PM.png" alt="">
         </div>
-    </div>
-<?php } ?>  
+    </div> 
 
 <footer  class="footer bg-secondary-500" >
     <div class="container m-auto pt-6 pb-16 sm:py-6"> 
@@ -36,12 +35,4 @@
             </div> 
         </div>
     </div>
-</footer>
-
-
- 
-
-<?php wp_footer() ?>  
-
-</body>
-</html>
+</footer> 

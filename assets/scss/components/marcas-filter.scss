@@ -35,6 +35,15 @@
                 }
             }
         }
+        h2{
+            ul{
+                @apply  m-0 ; 
+
+            }
+            a{
+                color: inherit;
+            }
+        }
     }
 
     &-modal{
