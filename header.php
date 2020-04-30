@@ -16,7 +16,7 @@
                           <a  class="  flex flex items-center text-white celebration-contact  border border-white py-1 px-2 sm:px-4 text-xs sm:text-base " target="_blank"  href="https://api.whatsapp.com/send?phone=+51998315039&text=Hola Grupo Tendenze Comunicaciones ¡Quisiera más información!"> Quiero que mi marca participe</a> 
                 </div> 
             </div>   -->
-            <div  class="bg-secondary-500 h-16 w-full " >  
+            <div  class="bg-secondary-500 h-8 h-16 w-full " >  
             </div>  
         <?php } else{?> 
             <div class="container m-auto flex h-12 md:h-16  justify-between">
