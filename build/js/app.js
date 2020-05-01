@@ -231,6 +231,7 @@ __webpack_require__.r(__webpack_exports__);
 var modalMarca = function modalMarca($) {
   $('.marca-card').on('click', function (e) {
     e.preventDefault();
+    document.documentElement.style.setProperty('--offsettop-modal-marca', "".concat(e.target.offsetTop + 'px'));
     $('#marca-modal').toggleClass('marca-modal-active');
     e.preventDefault();
     var postIdMarca = $(this).data('postidmarca');

@@ -18948,6 +18948,10 @@ code {
   color: #fff;
 }
 
+:root {
+  --offsettop-modal-marca:40em;
+}
+
 .marca-categories {
   display: -webkit-box;
   display: flex;
@@ -19033,13 +19037,7 @@ code {
   display: none;
   background: rgba(255, 255, 255, 0.8);
   height: 380vh;
-  padding-top: 58em;
-}
-
-@media (max-width: 768px) {
-  .marca-modal {
-    padding-top: 8rem;
-  }
+  padding-top: var(--offsettop-modal-marca);
 }
 
 .marca-modal-body {
