@@ -18994,12 +18994,19 @@ code {
 
 @media (max-width: 640px) {
   .marca-card-image img {
-    max-width: 105px !important;
+    max-width: 105px;
   }
 }
 
 .marca-card-image-201, .marca-card-image-214 {
-  max-width: 215px !important;
+  max-width: 215px;
+}
+
+@media (max-width: 640px) {
+  .marca-card-image-201, .marca-card-image-214 {
+    max-width: 124px;
+    width: 124px;
+  }
 }
 
 .marca-card h2 ul {

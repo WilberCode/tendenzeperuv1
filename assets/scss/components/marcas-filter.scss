@@ -31,12 +31,16 @@
             img{
                 max-width: 160px;
                 @screen maxsm{
-                    max-width: 105px !important;
+                    max-width: 105px   ;
                 }
             }
             // Se agrega mas tamaño
             &-201,&-214{
-                max-width: 215px !important;
+                max-width: 215px;
+                @screen maxsm{
+                    max-width: 124px;
+                    width:124px;  
+                }
             }
         }
         h2{
