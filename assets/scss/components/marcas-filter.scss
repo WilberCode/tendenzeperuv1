@@ -36,9 +36,9 @@
             }
             // Se agrega mas tamaño
             &-201,&-214{
-                max-width: 215px;
+                max-width: 215px !important;
                 @screen maxsm{
-                    max-width: 124px;
+                    max-width: 124px!important;
                     width:124px;  
                 }
             }

@@ -18999,12 +18999,12 @@ code {
 }
 
 .marca-card-image-201, .marca-card-image-214 {
-  max-width: 215px;
+  max-width: 215px !important;
 }
 
 @media (max-width: 640px) {
   .marca-card-image-201, .marca-card-image-214 {
-    max-width: 124px;
+    max-width: 124px !important;
     width: 124px;
   }
 }
