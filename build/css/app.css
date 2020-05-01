@@ -19083,10 +19083,6 @@ code {
   .marca-modal-info h1 {
     font-size: 1.25rem;
   }
-
-  .marca-modal-info h1 br {
-    display: none;
-  }
 }
 
 .marca-modal-info h2 {
@@ -19097,19 +19093,11 @@ code {
   .marca-modal-info h2 {
     font-size: 1rem;
   }
-
-  .marca-modal-info h2 br {
-    display: none;
-  }
 }
 
 @media (max-width: 768px) {
   .marca-modal-info h3 {
     font-size: 0.875rem;
-  }
-
-  .marca-modal-info h3 br {
-    display: none;
   }
 }
 

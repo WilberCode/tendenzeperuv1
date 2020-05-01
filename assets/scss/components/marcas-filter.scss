@@ -82,39 +82,23 @@
             h1{
                 @apply mb-4 mt-4 ;  
                 @screen maxmd{
-                    @apply text-xl;
-                    br{
-                        @apply hidden ; 
-
-                    }
+                    @apply text-xl; 
                 }
             }
             h2{
                 @apply mb-2 ; 
                 @screen maxmd{
-                    @apply text-base ;
-                    br{
-                        @apply hidden ; 
-
-                    }
+                    @apply text-base ; 
                 }
             }
             h3{
-                @screen maxmd{
-                    br{
-                        @apply hidden ; 
-
-                    }
+                @screen maxmd{ 
                     @apply text-sm ;
                 }
             }
             p{
                 @apply text-xl m-0 ; 
-                @screen maxmd{  
-                    // br{
-                    //     @apply hidden ; 
-
-                    // }
+                @screen maxmd{   
                      @apply text-base ; 
                 }
             }
