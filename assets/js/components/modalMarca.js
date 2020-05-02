@@ -28,7 +28,7 @@ let modalMarca = ($)=>{
                                 ${post.images == null?'':post.images.map((image)=>`<img class="mb-4" src="${image.marca_imagenes_individual}" />`).join('')}
                             </div>  
                             <div  class="pl-0 sm:pl-6"> 
-                                <img  class=" w-34 mb-10 sm:w-40 md:w-56 "  src="${post.thumbnail}" alt="${post.title}">
+                                <img  class=" w-34 mb-10 sm:w-40 md:w-54 "  src="${post.thumbnail}" alt="${post.title}">
                                  ${post.content} 
                             </div>
                             
