@@ -5,17 +5,7 @@
 <header class=" bg-white header <?php if(!is_page('1ra-feria-digital-mama')){ echo 'shadow';}?> ">
     <div class=" w-full bg-secondary-500 relative  z-40 " >
      
-       <?php if(is_page('1ra-feria-digital-mama')){?>
-             <!-- <div class="container m-auto flex h-10 md:h-12  justify-between">
-                <div class="h-full flex-1"> 
-                    <a class="text-white  block h-full" href="<?php  //echo home_url();?>" rel="home">
-                        <?php // echo  '<h1 class=" text-sm md:text-base lowercase h-full flex items-center font-semibold ">'.get_bloginfo( "name" ).'</h1>'; ?>
-                    </a> 
-                </div> 
-                <div class="h-full flex items-center" >
-                          <a  class="  flex flex items-center text-white celebration-contact  border border-white py-1 px-2 sm:px-4 text-xs sm:text-base " target="_blank"  href="https://api.whatsapp.com/send?phone=+51998315039&text=Hola Grupo Tendenze Comunicaciones ¡Quisiera más información!"> Quiero que mi marca participe</a> 
-                </div> 
-            </div>   -->
+       <?php if(is_page('1ra-feria-digital-mama')){?> 
             <div  class="bg-secondary-500 h-8 sm:h-16 w-full " >  
             </div>  
         <?php } else{?> 
@@ -70,10 +60,9 @@
             </div>
         </div>
         <?php } else{?> 
-            <div class="container m-auto flex   md:h-42 justify-center"> 
+            <div class="container m-auto flex h-14  sm:h-24 justify-center"> 
                 <div class=" flex w-full  justify-end items-center py-1 sm:py-2 ">
-                    <img class=" w-12 h-12 sm:w-20 sm:h-20 md:w-41 md:h-41"  src="<?php echo thumbnail_image_url('full'); ?>">
-                </div>
+                 </div>
             </div> 
         <?php }?> 
 </header>
