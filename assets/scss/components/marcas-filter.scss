@@ -1,8 +1,4 @@
-:root{
-    --offsettop-modal-marca:40em;
-
-} 
-.marca{
+ .marca{
     &-categories{ 
         @apply  flex flex-wrap;
         li{ 

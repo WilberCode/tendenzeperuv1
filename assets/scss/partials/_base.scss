@@ -18,38 +18,9 @@ html {
 
 // Anchors
 // =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
-a {
-  @apply text-link;
+a { 
   transition: all 0.24s ease;
-}
-//   &, &:visited {
-//     @apply text-link;
-//     transition: all 0.24s ease;
-
-//     &:hover,
-//     &:focus {
-//       @apply text-link-hover;
-//     }
-
-//     &:active {
-//     }
-
-//     // If an anchor exists inside a heading, inherit the headings color
-//     $this: &;
-//     @at-root h1, h2, h3, h4, h5, h6 {
-//       #{$this} {
-//         color: inherit;
-//       }
-//     }
-//   }
-// }
-
-
-// Headings
-// =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
-// h1, h2, h3, h4, h5, h6 {
-//   @apply  text-black leading-tight font-cooperhewitteg font-semibold ;  
-// } 
+} 
 h1 {
   @apply text-2xl;
 }
@@ -77,14 +48,3 @@ code {
   @apply font-mono inline-block px-1 rounded-sm text-sm align-baseline bg-pink-100 text-pink-600;
 }
 
-:root{
-  --primary:#FAE800;
-  --secondary:#231F20;
-}
-
-$primary:#FAE800;
-$secondary:#231F20;
-
-.container{
-  @apply m-auto;
-}

@@ -19797,7 +19797,6 @@ html {
 }
 
 a {
-  color: #3182ce;
   -webkit-transition: all 0.24s ease;
   transition: all 0.24s ease;
 }
@@ -19838,6 +19837,7 @@ code {
 :root {
   --primary:#FAE800;
   --secondary:#231F20;
+  --offsettop-modal-marca:40em;
 }
 
 .container {
@@ -20250,10 +20250,6 @@ code {
 .everest-forms .evf-submit-container button:hover {
   background-color: #2b6cb0;
   color: #fff;
-}
-
-:root {
-  --offsettop-modal-marca:40em;
 }
 
 .marca-categories {
