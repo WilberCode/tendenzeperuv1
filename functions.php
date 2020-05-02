@@ -38,7 +38,17 @@ function thumbnail_image_url($size){
     return $main_image[0];
 }
 
-
+// Obtiene la Url de carpeta upload
+function tz_get_upload_dir_var( $param, $subfolder = '' ) {
+    $upload_dir = wp_upload_dir();
+    $url = $upload_dir[ $param ];
+ 
+    if ( $param === 'baseurl' && is_ssl() ) {
+        $url = str_replace( 'http://', 'https://', $url );
+    }
+ 
+    return $url . $subfolder;
+}
  
 function events_endpoint() {
 	register_rest_route( 'marcas/', 'destacados/', array(
