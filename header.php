@@ -2,25 +2,17 @@
 <?php get_template_part( 'templates/partials/document-open' ); ?>
 
 <!-- Site header markup goes here -->
-<header class=" bg-white header <?php if(!is_page('1ra-feria-digital-mama')){ echo 'shadow';}?> ">
-    <div class=" w-full bg-secondary-500 relative  z-40 " >
-     
-       <?php if(is_page('1ra-feria-digital-mama')){?> 
-            <div  class="bg-secondary-500 h-8 sm:h-16 w-full " >  
-            </div>  
-        <?php } else{?> 
-            <div class="container m-auto flex h-12 md:h-16  justify-between">
-                <div class="h-full flex-1"> 
-                    <a class="text-white  block h-full" href="<?php echo home_url();?>" rel="home">
-                        <?php echo  '<h1 class=" text-sm md:text-base lowercase h-full flex items-center font-semibold ">'.get_bloginfo( "name" ).'</h1>'; ?>
-                    </a> 
-                </div> 
-                <a  class="h-full  flex items-center text-white  " target="_blank"  href="https://api.whatsapp.com/send?phone=+51998315039&text=Hola Grupo Tendenze Comunicaciones ¡Quisiera más información!"> Contacto </a>     
-            </div>
-        <?php  } ?> 
-    </div>   
-     <?php
-        if(!is_page('1ra-feria-digital-mama')){?>
+<header class=" bg-white header shadow ">
+    <div class=" w-full bg-secondary-500 relative  z-40 " >  
+        <div class="container m-auto flex h-12 md:h-16  justify-between">
+            <div class="h-full flex-1"> 
+                <a class="text-white  block h-full" href="<?php echo home_url();?>" rel="home">
+                    <?php echo  '<h1 class=" text-sm md:text-base lowercase h-full flex items-center font-semibold ">'.get_bloginfo( "name" ).'</h1>'; ?>
+                </a> 
+            </div> 
+            <a  class="h-full  flex items-center text-white  " target="_blank"  href="https://api.whatsapp.com/send?phone=+51998315039&text=Hola Grupo Tendenze Comunicaciones ¡Quisiera más información!"> Contacto </a>     
+        </div> 
+    </div>    
       <div class="header-wrap container m-auto flex h-20 md:h-26 justify-center ">
         <div class=" flex  justify-center items-center " >
              <?php  
@@ -59,10 +51,5 @@
              </div>   
             </div>
         </div>
-        <?php } else{?> 
-            <div class="container m-auto flex h-14  sm:h-24 justify-center"> 
-                <div class=" flex w-full  justify-end items-center py-1 sm:py-2 ">
-                 </div>
-            </div> 
-        <?php }?> 
+         
 </header>

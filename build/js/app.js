@@ -95,16 +95,11 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_posts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/posts */ "./assets/js/components/posts.js");
-/* harmony import */ var _components_modalMarca__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/modalMarca */ "./assets/js/components/modalMarca.js");
-// import './materialize/materialize.min.js'
-var $ = jQuery.noConflict();
-
- // Shorthand 
+/* harmony import */ var _utils_hack__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/hack */ "./assets/js/utils/hack.js");
+var $ = window.jQuery;
+ // Shorthand ID
 
 var Id = document.getElementById.bind(document);
-var className = document.getElementsByClassName.bind(document);
-var tagName = document.getElementsByTagName.bind(document);
 
 function menuMobile() {
   var mobileNav = Id('mobile-nav-wrap');
@@ -119,7 +114,28 @@ function menuMobile() {
   });
 }
 
-function separateFirstText() {
+$(document).ready(function () {
+  menuMobile(); // Menu Mobile: Show menu and hide 
+
+  Object(_utils_hack__WEBPACK_IMPORTED_MODULE_0__["separateFirstText"])($); // Card title: serate the first word in a span
+
+  Object(_utils_hack__WEBPACK_IMPORTED_MODULE_0__["showVideos"])($); // Button show the videos
+});
+
+/***/ }),
+
+/***/ "./assets/js/utils/hack.js":
+/*!*********************************!*\
+  !*** ./assets/js/utils/hack.js ***!
+  \*********************************/
+/*! exports provided: separateFirstText, showVideos */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "separateFirstText", function() { return separateFirstText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showVideos", function() { return showVideos; });
+var separateFirstText = function separateFirstText($) {
   $('.card__title').each(function () {
     var text = this.innerHTML;
     var firstSpaceIndex = text.indexOf(" ");
@@ -133,155 +149,12 @@ function separateFirstText() {
       this.innerHTML = '<span class="card-category">' + text + '</span>';
     }
   });
-}
-
-function showVideos() {
+};
+var showVideos = function showVideos($) {
   $('.show-videos').click(function () {
     $('.vimeography-theme-harvestone').toggleClass('show-video');
   });
-}
-
-function activeCategory() {
-  $('.marca-category-filter').on('click', function (e) {
-    $('.marca-category-filter').each(function (u) {
-      $(this).removeClass('marca-category-active');
-    });
-    $(this).toggleClass('marca-category-active');
-  });
-}
-
-jQuery(function ($) {
-  $(document).ready(function () {
-    menuMobile(); // Menu Mobile: Show menu and hide 
-
-    separateFirstText(); // Card title: serate the first word in a span 
-
-    showVideos(); // Button show the videos
-
-    activeCategory(); // Active color of categories
-
-    Object(_components_modalMarca__WEBPACK_IMPORTED_MODULE_1__["default"])($); // Active Modal of marca 
-    // $('#marca-modal').on('click', function(e){  
-    //     const parentID = e.target.parentNode.id 
-    //     console.log(parentID )
-    //     console.log($(this) )
-    //      if (parentID !== 'marca-modal-body' && e.target.id !== 'marca-modal-body' ) {
-    //         $('#marca-modal').removeClass('marca-modal-active')
-    //     } else {
-    //         return;
-    //     }
-    // })
-  });
-});
-
-/***/ }),
-
-/***/ "./assets/js/components/filterMarcas.js":
-/*!**********************************************!*\
-  !*** ./assets/js/components/filterMarcas.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modalMarca__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modalMarca */ "./assets/js/components/modalMarca.js");
-
-
-var filterMarcas = function filterMarcas($) {
-  $('.marca-category-filter > a').on('click', function (e) {
-    e.preventDefault();
-    var category = $(this).data('categorymarca');
-    var html_marca = '';
-    var headers = new Headers({
-      'Content-Type': 'application/json',
-      'X-WP-Nonce': ajax_marcas.nonce
-    });
-    var category_url = $(this)[0].id === 'marca-todos' ? '' : "?category=".concat(category);
-    fetch("".concat(ajax_marcas.url, "/").concat(category_url), {
-      method: 'get',
-      headers: headers,
-      credentials: 'same-origin'
-    }).then(function (response) {
-      return response.ok ? response.json() : 'No hay marcas...';
-    }).then(function (json_response) {
-      json_response.map(function (post) {
-        html_marca += "   \n                                   <div class=\"marca-card\" data-postidmarca=\"".concat(post.id, "\" >\n                                        <div  class=\"marca-card-image flex justify-center items-center h-56 sm:h-65 p-4 \" >\n                                            <img  class=\"w-full\" style=\"max-width: 140px;\"  src=\" ").concat(post.thumbnail, "\" alt=\"").concat(post.link, "\" >  \n                                        </div>\n                                        <h2  class=\"text-lg font-medium text-secondary-300 mt-2 \" >Ver Regalos</h2>\n                                    </div>  \n                                  ");
-      });
-      $('#marca-grid').html(html_marca); // Modal
-
-      Object(_modalMarca__WEBPACK_IMPORTED_MODULE_0__["default"])($);
-    });
-  });
 };
-
-/* harmony default export */ __webpack_exports__["default"] = (filterMarcas);
-
-/***/ }),
-
-/***/ "./assets/js/components/modalMarca.js":
-/*!********************************************!*\
-  !*** ./assets/js/components/modalMarca.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var modalMarca = function modalMarca($) {
-  $('.marca-card').on('click', function (e) {
-    e.preventDefault();
-    document.documentElement.style.setProperty('--offsettop-modal-marca', "".concat(e.target.offsetTop + 'px'));
-    $('#marca-modal').toggleClass('marca-modal-active');
-    e.preventDefault();
-    var postIdMarca = $(this).data('postidmarca');
-    var html_marca_modal_info = '';
-    var headers = new Headers({
-      'Content-Type': 'application/json',
-      'X-WP-Nonce': ajax_marcas.nonce
-    });
-    fetch("".concat(ajax_marcas.url, "/?post_id=").concat(postIdMarca), {
-      method: 'get',
-      headers: headers,
-      credentials: 'same-origin'
-    }).then(function (response) {
-      return response.ok ? response.json() : 'No información de la marca...';
-    }).then(function (json_response) {
-      if (json_response) {
-        json_response.map(function (post) {
-          html_marca_modal_info += "   \n                        <div  class=\"grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10\">\n                            <div>   \n                                ".concat(post.images == null ? '' : post.images.map(function (image) {
-            return "<img class=\"mb-4\" src=\"".concat(image.marca_imagenes_individual, "\" />");
-          }).join(''), "\n                            </div>  \n                            <div  class=\"pl-0 sm:pl-6\"> \n                                <img  class=\" w-34 mb-10 sm:w-40 md:w-54 \"  src=\"").concat(post.thumbnail, "\" alt=\"").concat(post.title, "\">\n                                 ").concat(post.content, " \n                            </div>\n                            \n                        </div>\n                         ");
-        });
-      }
-
-      $('#marca-modal-info').html(html_marca_modal_info);
-    });
-  });
-  $('.marca-modal-close').on('click', function (e) {
-    $('#marca-modal').removeClass('marca-modal-active');
-  });
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (modalMarca);
-
-/***/ }),
-
-/***/ "./assets/js/components/posts.js":
-/*!***************************************!*\
-  !*** ./assets/js/components/posts.js ***!
-  \***************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _filterMarcas__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./filterMarcas */ "./assets/js/components/filterMarcas.js");
- //fetch all posts with ajax
-
-jQuery(function ($) {
-  Object(_filterMarcas__WEBPACK_IMPORTED_MODULE_0__["default"])($);
-});
 
 /***/ }),
 
