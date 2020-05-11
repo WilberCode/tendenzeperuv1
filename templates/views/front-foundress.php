@@ -8,7 +8,7 @@
                         Directora de cuentas <br>
                         & estrategia</h3>
                 </div>
-                <img class="foundress-avatar  rounded-full " src="<?php echo tz_get_upload_dir_var( 'baseurl', '/2020/05/martina.jpg' ); ?>" alt="">
+                <img class="foundress-avatar  rounded-full " src="<?php echo tz_get_upload_dir_var( 'baseurl', '/2020/05/martina_b.jpg' ); ?>" alt="">
             </div>
             <div class="flex justify-start items-center" >
                 <img class="foundress-avatar  rounded-full " src="<?php echo tz_get_upload_dir_var( 'baseurl', '/2020/05/karina.jpg' ); ?>" alt="">

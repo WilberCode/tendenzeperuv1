@@ -100,35 +100,25 @@ add_action( 'after_setup_theme', 'wph_theme_support' );
 
 
 //  Menus
-
-// function wph_menus() {
-
-// 	$locations = array(
-// 		'primary'  => __( 'Menu Principal', 'wph' ),
-// 		'expanded' => __( 'Menu Alternativo', 'wph' ),
-// 		'mobile'   => __( 'Menu Mobile', 'wph' ),
-// 		'footer'   => __( 'Menu Footer ', 'wph' ),
-// 		'social'   => __( 'Redes Sociales', 'wph' ),
-// 	);
-
-// 	register_nav_menus( $locations );
-// 	 // register Menu 
-// }
-
-// add_action( 'init', 'wph_menus' );
-
-
+ 
 
 // Widgets
  
 function wph_front_widgets(){
     register_sidebar(array(
         'name' => __('Footer - Contacto'),
-        'id' =>'footer-contact',
+        'id' =>'footer_contact',
         'description'   => 'Contactos de la empresa',
         'before_widget' => '<div class="footer-contact">',
         'after_widget'  => '</div>'  
-    ));   
+	));   
+    register_sidebar(array(
+        'name' => __('Fundadores'),
+        'id' =>'advisory',
+        'description'   => 'Información de Bio',
+        'before_widget' => '<div class="footer-contact">',
+        'after_widget'  => '</div>'  
+	));   
   
 }
 add_action('widgets_init', 'wph_front_widgets');
@@ -212,3 +202,14 @@ function wph_setup(){
   remove_action('wp_head', 'wp_generator'); //Eliminar La version de  wordpress del codigo
 }
 add_action('after_setup_theme', 'wph_setup');
+
+
+
+
+
+
+
+
+
+
+

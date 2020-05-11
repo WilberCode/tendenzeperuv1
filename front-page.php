@@ -5,7 +5,12 @@ get_header();?>
 <div class="banner bg-primary-500 ">
     <?php echo do_shortcode('[metaslider id="15"]'); ?>
 </div> 
-<?php get_template_part( 'templates/views/front-bio');?>  
+    <?php get_template_part( 'templates/views/front-bio');?>   
+
+
+
+<?php //dynamic_sidebar('advisory'); ?>
+
 
 <?php get_template_part( 'templates/views/front-advisory');?> 
 
