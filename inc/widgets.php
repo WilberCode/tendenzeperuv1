@@ -113,12 +113,21 @@ function wph_front_widgets(){
         'after_widget'  => '</div>'  
 	));   
     register_sidebar(array(
+        'name' => __('Slogan'),
+        'id' =>'slogan',
+        'description'   => 'Imagen de un slogan',
+        'before_widget' => '<div class="slogan-image w-full max-w-6xl m-auto px-6 sm:px-10 ">',
+        'after_widget'  => '</div>',
+        'before_title' => '<h2 class="hidden">',
+        'after_title'  => '</h2>'  
+	));   
+    register_sidebar(array(
         'name' => __('Clientes'),
         'id' =>'clients',
         'description'   => 'Logos de clientes',
         'before_widget' => '<div class="clients-image w-full max-w-6xl m-auto px-6 sm:px-10 ">',
         'after_widget'  => '</div>',
-        'before_title' => '<h2 class="hidden">',
+        'before_title' => '<h2 class=" mt-8 mb-10 sm:mb-20  text-2xl sm:text-4xl text-center">',
         'after_title'  => '</h2>'  
 	));   
     // register_sidebar(array(

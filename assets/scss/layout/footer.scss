@@ -1,8 +1,9 @@
 .slogan{
     img{
-        max-width: 356px;
+        @apply w-full m-auto;
+        max-width: 356px #{!important};
         @screen maxsm{
-            max-width: 180px;
+            max-width: 180px #{!important};
         }
     }
 }
