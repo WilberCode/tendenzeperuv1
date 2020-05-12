@@ -113,12 +113,21 @@ function wph_front_widgets(){
         'after_widget'  => '</div>'  
 	));   
     register_sidebar(array(
-        'name' => __('Fundadores'),
-        'id' =>'advisory',
-        'description'   => 'Información de Bio',
-        'before_widget' => '<div class="footer-contact">',
-        'after_widget'  => '</div>'  
+        'name' => __('Clientes'),
+        'id' =>'clients',
+        'description'   => 'Logos de clientes',
+        'before_widget' => '<div class="clients-image w-full max-w-6xl m-auto px-6 sm:px-10 ">',
+        'after_widget'  => '</div>',
+        'before_title' => '<h2 class="hidden">',
+        'after_title'  => '</h2>'  
 	));   
+    // register_sidebar(array(
+    //     'name' => __('Fundadores'),
+    //     'id' =>'advisory',
+    //     'description'   => 'Información de Bio',
+    //     'before_widget' => '<div class="footer-contact">',
+    //     'after_widget'  => '</div>'  
+	// ));   
   
 }
 add_action('widgets_init', 'wph_front_widgets');
