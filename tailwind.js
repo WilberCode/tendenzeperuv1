@@ -80,7 +80,17 @@ module.exports = {
                 }
             }, 
             fontSize: {
-                xxs: '0.675rem',
+                 xxs: '0.675rem',
+                  xs: '0.75rem',
+                  sm: '0.875rem',
+                base: '1rem',
+                  lg: '1.125rem',
+                  xl: '1.25rem',
+               '2xl': '25px',
+               '3xl': '1.875rem',
+               '4xl': '43.99px',
+               '5xl': '3rem',
+               '6xl': '4rem',
             },
             lineHeight: {
                 tighter: '1.125',

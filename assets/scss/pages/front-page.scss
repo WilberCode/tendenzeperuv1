@@ -53,25 +53,30 @@
 }
 .main{ 
     &-excerpt{
-        max-width: 60rem;
+        max-width: 61rem;
     }
     &__title{
         line-height: 2.7rem;
-        font-size: 2.38rem;
+        // font-size: 2.38rem;
+        @apply text-4xl ;
         @screen maxlg{
             @apply text-3xl ;
          }
         @screen maxmd{
-           @apply text-2xl leading-7 ;
+           @apply text-2xl leading-7 ; 
         }
     }
     p{
-        font-size: 1.30rem;
+        @apply text-2xl ;
         @screen maxlg{
             @apply text-lg ;
          }
         @screen maxmd{
             @apply text-base;
+            br{
+                @apply hidden ;
+                    
+                }
 
          }
     }
@@ -87,7 +92,7 @@
          }
     }
     &__bio{
-       @screen maxmd {
+       @screen maxlg {
         br{
             display: none;
         }

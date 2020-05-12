@@ -15292,7 +15292,7 @@ video {
 }
 
 .text-2xl{
-  font-size: 1.5rem;
+  font-size: 25px;
 }
 
 .text-3xl{
@@ -15300,7 +15300,7 @@ video {
 }
 
 .text-4xl{
-  font-size: 2.25rem;
+  font-size: 43.99px;
 }
 
 .text-5xl{
@@ -19806,7 +19806,7 @@ a {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 25px;
 }
 
 h2 {
@@ -19942,7 +19942,7 @@ code {
 }
 
 .card-price-simbol {
-  font-size: 2.25rem;
+  font-size: 43.99px;
   font-weight: 300;
   line-height: 2.25rem;
 }
@@ -20455,7 +20455,7 @@ code {
   color: #231F20;
   display: block;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 25px;
   font-weight: 700;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -20749,12 +20749,12 @@ code {
 }
 
 .main-excerpt {
-  max-width: 60rem;
+  max-width: 61rem;
 }
 
 .main__title {
   line-height: 2.7rem;
-  font-size: 2.38rem;
+  font-size: 43.99px;
 }
 
 @media (max-width: 1023px) {
@@ -20765,13 +20765,13 @@ code {
 
 @media (max-width: 768px) {
   .main__title {
-    font-size: 1.5rem;
+    font-size: 25px;
     line-height: 1.75rem;
   }
 }
 
 .main p {
-  font-size: 1.3rem;
+  font-size: 25px;
 }
 
 @media (max-width: 1023px) {
@@ -20783,6 +20783,10 @@ code {
 @media (max-width: 768px) {
   .main p {
     font-size: 1rem;
+  }
+
+  .main p br {
+    display: none;
   }
 }
 
@@ -20800,7 +20804,7 @@ code {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .foundress__bio br {
     display: none;
   }
@@ -20809,7 +20813,7 @@ code {
 .service-main h1 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  font-size: 2.25rem;
+  font-size: 43.99px;
   color: #000;
   font-weight: 400;
 }
@@ -35573,7 +35577,7 @@ code {
   }
 
   .sm\:text-2xl{
-    font-size: 1.5rem;
+    font-size: 25px;
   }
 
   .sm\:text-3xl{
@@ -35581,7 +35585,7 @@ code {
   }
 
   .sm\:text-4xl{
-    font-size: 2.25rem;
+    font-size: 43.99px;
   }
 
   .sm\:text-5xl{
@@ -54730,7 +54734,7 @@ code {
   }
 
   .md\:text-2xl{
-    font-size: 1.5rem;
+    font-size: 25px;
   }
 
   .md\:text-3xl{
@@ -54738,7 +54742,7 @@ code {
   }
 
   .md\:text-4xl{
-    font-size: 2.25rem;
+    font-size: 43.99px;
   }
 
   .md\:text-5xl{
@@ -73887,7 +73891,7 @@ code {
   }
 
   .lg\:text-2xl{
-    font-size: 1.5rem;
+    font-size: 25px;
   }
 
   .lg\:text-3xl{
@@ -73895,7 +73899,7 @@ code {
   }
 
   .lg\:text-4xl{
-    font-size: 2.25rem;
+    font-size: 43.99px;
   }
 
   .lg\:text-5xl{
@@ -93044,7 +93048,7 @@ code {
   }
 
   .xl\:text-2xl{
-    font-size: 1.5rem;
+    font-size: 25px;
   }
 
   .xl\:text-3xl{
@@ -93052,7 +93056,7 @@ code {
   }
 
   .xl\:text-4xl{
-    font-size: 2.25rem;
+    font-size: 43.99px;
   }
 
   .xl\:text-5xl{
@@ -112201,7 +112205,7 @@ code {
   }
 
   .maxsm\:text-2xl{
-    font-size: 1.5rem;
+    font-size: 25px;
   }
 
   .maxsm\:text-3xl{
@@ -112209,7 +112213,7 @@ code {
   }
 
   .maxsm\:text-4xl{
-    font-size: 2.25rem;
+    font-size: 43.99px;
   }
 
   .maxsm\:text-5xl{
@@ -131358,7 +131362,7 @@ code {
   }
 
   .maxmd\:text-2xl{
-    font-size: 1.5rem;
+    font-size: 25px;
   }
 
   .maxmd\:text-3xl{
@@ -131366,7 +131370,7 @@ code {
   }
 
   .maxmd\:text-4xl{
-    font-size: 2.25rem;
+    font-size: 43.99px;
   }
 
   .maxmd\:text-5xl{
@@ -150515,7 +150519,7 @@ code {
   }
 
   .maxlg\:text-2xl{
-    font-size: 1.5rem;
+    font-size: 25px;
   }
 
   .maxlg\:text-3xl{
@@ -150523,7 +150527,7 @@ code {
   }
 
   .maxlg\:text-4xl{
-    font-size: 2.25rem;
+    font-size: 43.99px;
   }
 
   .maxlg\:text-5xl{
@@ -169672,7 +169676,7 @@ code {
   }
 
   .maxl\:text-2xl{
-    font-size: 1.5rem;
+    font-size: 25px;
   }
 
   .maxl\:text-3xl{
@@ -169680,7 +169684,7 @@ code {
   }
 
   .maxl\:text-4xl{
-    font-size: 2.25rem;
+    font-size: 43.99px;
   }
 
   .maxl\:text-5xl{

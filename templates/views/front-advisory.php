@@ -1,4 +1,4 @@
-<div class="advisory mt-16 bg-gray-400" id="advisory">
+<div class="advisory mt-15 sm:mt-16 bg-gray-400" id="advisory">
     <div class="container">
         <div class="md:flex py-12 w-full">
             <div class=" w-full md:w-1/2 " >

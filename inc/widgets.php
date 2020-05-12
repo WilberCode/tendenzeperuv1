@@ -113,6 +113,15 @@ function wph_front_widgets(){
         'after_widget'  => '</div>'  
 	));   
     register_sidebar(array(
+        'name' => __('Definición'),
+        'id' =>'difinition',
+        'description'   => 'Definición de la Empresa',
+        'before_widget' => '<div class="difinition-discription  ">',
+        'after_widget'  => '</div>',
+        'before_title' => '<h2 class=" font-normal main__title">',
+        'after_title'  => '</h2>'  
+	));   
+    register_sidebar(array(
         'name' => __('Slogan'),
         'id' =>'slogan',
         'description'   => 'Imagen de un slogan',
