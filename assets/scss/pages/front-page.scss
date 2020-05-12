@@ -56,9 +56,8 @@
         max-width: 61rem;
     }
     &__title{
-        line-height: 2.7rem;
-        // font-size: 2.38rem;
-        @apply text-4xl ;
+        line-height: 2.7rem; 
+        @apply text-4xl text-center ;
         @screen maxlg{
             @apply text-3xl ;
          }
