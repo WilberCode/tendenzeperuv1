@@ -16,7 +16,8 @@ use WpTailwindCssThemeBoilerplate\View;
  */
 require get_stylesheet_directory() . '/app/AutoLoader.php'; 
 require get_stylesheet_directory() . '/inc/widgets.php';  
- 
+require get_stylesheet_directory() . '/inc/customizer_fundadoras.php'; 
+require get_stylesheet_directory() . '/inc/customizer_asesoria.php'; 
 
 $loader = new AutoLoader();
 $loader->register();
@@ -26,8 +27,7 @@ View::$view_dir = get_stylesheet_directory() . '/templates/views';
 
 require get_stylesheet_directory() . '/includes/scripts-and-styles.php';
  
-// require get_stylesheet_directory() . '/inc/customizer_asesoria.php'; 
-require get_stylesheet_directory() . '/inc/customizer_fundadoras.php'; 
+
 // Tendenze
 
 // Obtiene la Url del thumbnail     
