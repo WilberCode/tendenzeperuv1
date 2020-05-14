@@ -29,7 +29,7 @@ function ten_customize_register($wp_customize){
             'label'   => __('Foto de Karina', 'wpfrontpage'),
             'section' => 'frontpage',
             'setting' => 'karina_image',
-            'priority' => 1
+            'priority' => 2
         )) ); 
 
         // Bio Tendenze
@@ -40,7 +40,7 @@ function ten_customize_register($wp_customize){
         $wp_customize -> add_control('bio_description', array(
             'label'   => __('Biografia de tendenze', 'wpfrontpage'),
             'section' => 'frontpage',
-            'priority' => 4
+            'priority' => 3
         ));
       
     }
