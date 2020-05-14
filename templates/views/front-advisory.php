@@ -2,7 +2,9 @@
     <div class="container">
         <div class="md:flex py-12 w-full">
             <div class=" w-full md:w-1/2 " >
-              <img class=" w-full max-w-md md:pl-3 md:pr-5" src="https://nuevo.tendenzeperu.com/wp-content/uploads/2020/04/Asesoría.png" >
+              <img class=" w-full max-w-md md:pl-3 md:pr-5" src="<?php echo get_theme_mod("asesoria_image"); ?>" alt="Tu marca ¿Tiene una propuesta
+de valor para el nuevo mundo?" title="Tu marca ¿Tiene una propuesta
+de valor para el nuevo mundo?" >
             </div>
             <div class=" w-full md:w-1/2 mt-8 md:mt-0">
                 <span  class="text-xl font-bold text-secondary-800 " >Asesoría</span>
@@ -17,7 +19,7 @@ para encontrar la esencia de la marca. <br>
                 la categoría, la competencia y las motivaciones del consumidor identificamos el rol que tu marca debe cumplir para desarrollar relaciones
                 sólidas y auténticas con el consumidor.
                 </p>
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=+51998315039&text=Hola Grupo Tendenze Comunicaciones ¡Quisiera más información!"  class=" inline-block mt-5 py-2 px-8 text-black  border border-black font-bold   tracking-widest " >me interesa</a>
+                <a target="_blank" href="<?php echo get_theme_mod("asesoria_url"); ?>"  class=" inline-block mt-5 py-2 px-8 text-black  border border-black font-bold   tracking-widest " >me interesa</a>
             </div>
         </div>
     </div>

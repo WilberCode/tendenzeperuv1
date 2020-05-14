@@ -15,8 +15,10 @@ use WpTailwindCssThemeBoilerplate\View;
  * as the autoloader will handle that for you.
  */
 require get_stylesheet_directory() . '/app/AutoLoader.php';
-require get_stylesheet_directory() . '/inc/widgets.php'; 
-
+require get_stylesheet_directory() . '/inc/widgets.php';  
+require get_stylesheet_directory() . '/inc/customizer_asesoria.php'; 
+require get_stylesheet_directory() . '/inc/customizer_fundadoras.php'; 
+ 
 
 $loader = new AutoLoader();
 $loader->register();

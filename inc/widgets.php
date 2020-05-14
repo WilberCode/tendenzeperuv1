@@ -2,22 +2,7 @@
 function wph_theme_support() {
 
 	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	// Custom background color.
-	add_theme_support(
-		'custom-background',
-		array(
-			'default-color' => 'f5efe0',
-		)
-	);
-
-	// Set content-width.
-	global $content_width;
-	if ( ! isset( $content_width ) ) {
-		$content_width = 580;
-	}
-
+	add_theme_support( 'automatic-feed-links' ); 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
