@@ -26,8 +26,8 @@ View::$view_dir = get_stylesheet_directory() . '/templates/views';
 
 require get_stylesheet_directory() . '/includes/scripts-and-styles.php';
  
-require get_stylesheet_directory() . '/inc/customizer_asesoria.php'; 
-require get_stylesheet_directory() . '/inc/customizer_fundadoras.php'; 
+// require get_stylesheet_directory() . '/inc/customizer_asesoria.php'; 
+// require get_stylesheet_directory() . '/inc/customizer_fundadoras.php'; 
 // Tendenze
 
 // Obtiene la Url del thumbnail     
