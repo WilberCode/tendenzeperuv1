@@ -43,7 +43,8 @@ function ten_customize_register($wp_customize){
             'priority' => 3
         ));
       
-
+        
+        // Asesoria
         $wp_customize -> add_section('frontpageasesoria',array(
             'title' => __('Asesoria', 'wpfrontpageasesoria'),
             'description' => sprintf(__('Fotos de las fundadoras','wpfrontpageasesoria')),
