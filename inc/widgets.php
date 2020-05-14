@@ -8,6 +8,20 @@ function wph_theme_support() {
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
+	// Custom background color.
+	add_theme_support(
+		'custom-background',
+		array(
+			'default-color' => 'f5efe0',
+		)
+	);
+
+	// Set content-width.
+	global $content_width;
+	if ( ! isset( $content_width ) ) {
+		$content_width = 580;
+	}
+	
 	add_theme_support( 'post-thumbnails' );
 
 	// Set post thumbnail size.
