@@ -2,17 +2,17 @@
     <div class="container">
         <div class="md:flex py-12 w-full">
             <div class=" w-full md:w-1/2 " >
-              <img class=" w-full max-w-md md:pl-3 md:pr-5" src="<?php echo get_theme_mod("asesoria_image"); ?>" alt="Tu marca ¿Tiene una propuesta
+              <img class=" w-52 sm:w-full  sm:max-w-md md:pl-3 md:pr-5" src="<?php echo get_theme_mod("asesoria_image"); ?>" alt="Tu marca ¿Tiene una propuesta
 de valor para el nuevo mundo?" title="Tu marca ¿Tiene una propuesta
 de valor para el nuevo mundo?" >
             </div>
             <div class=" w-full md:w-1/2 mt-8 md:mt-0">
-                <span  class="text-xl font-bold text-secondary-800 " >Asesoría</span>
-                <h2  class="text-4xl font-normal " >Brand Journey</h2>
-                <h3 class="text-xl font-semibold mt-3 leading-6 text-secondary-600 " >Tu marca ¿Tiene una propuesta <br>
+                <span  class=" text-lg sm:text-xl font-bold text-secondary-800 " >Asesoría</span>
+                <h2  class=" text-2xl sm:text-4xl font-normal " >Brand Journey</h2>
+                <h3 class="text-lg  sm:text-xl font-semibold mt-3 leading-6 text-secondary-600 " >Tu marca ¿Tiene una propuesta <br>
 de valor para el nuevo mundo?</h3>
 
-            <p  class=" text-lg tracking-wide text-secondary-400  " >
+            <p  class=" text-base sm:text-lg tracking-wide text-secondary-400  " >
             Nuestro servicio de consultoría comprende una metodología única
 para encontrar la esencia de la marca. <br>
                 A través de un proceso de investigación del análisis de la información,
