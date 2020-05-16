@@ -101,9 +101,11 @@
             a{
                 @apply py-3 text-secondary-500 block text-center text-2xl font-bold ; 
                 border-bottom: 1px solid rgba(white, 0.1);  
+                @screen maxsm{
+                    @apply  text-xl;
+                }
                 &:hover{
-                 @apply underline ; 
-                    
+                 @apply underline;  
                 }
             } 
              &:last-child > a{

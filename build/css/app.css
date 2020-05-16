@@ -20460,6 +20460,12 @@ code {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+@media (max-width: 640px) {
+  .mobile-menu li a {
+    font-size: 1.25rem;
+  }
+}
+
 .mobile-menu li a:hover {
   text-decoration: underline;
 }
@@ -20755,6 +20761,7 @@ code {
 .main__title {
   line-height: 2.7rem;
   font-size: 43.99px;
+  text-align: center;
 }
 
 @media (max-width: 1023px) {
@@ -20766,6 +20773,13 @@ code {
 @media (max-width: 768px) {
   .main__title {
     font-size: 25px;
+    line-height: 1.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .main__title {
+    font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
@@ -20787,6 +20801,16 @@ code {
 
   .main p br {
     display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .foundress h2 {
+    font-size: 1.125rem;
+  }
+
+  .foundress h3 {
+    font-size: 1rem;
   }
 }
 

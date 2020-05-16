@@ -64,6 +64,9 @@
         @screen maxmd{
            @apply text-2xl leading-7 ; 
         }
+        @screen maxsm{
+           @apply text-xl leading-7 ; 
+        }
     }
     p{
         @apply text-2xl ;
@@ -81,6 +84,14 @@
     }
 } 
 .foundress{
+    @screen maxsm{  
+        h2{
+            @apply text-lg; 
+        }
+        h3{
+            @apply text-base; 
+        }
+    } 
     &-avatar{ 
         @apply object-cover  ; 
         width: 12.5rem;
