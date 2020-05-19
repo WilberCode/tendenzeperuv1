@@ -14,8 +14,8 @@ export let separateFirstText = ($) =>{
 }
  
 export let showVideos = ($)=>{
-    $('.show-videos').click(()=>{
-        $('.vimeography-theme-harvestone').toggleClass('show-video') 
+    $('.btn-show-videos').click(()=>{
+        $('.video-hidden').toggleClass('video-show') 
     })
 } 
  

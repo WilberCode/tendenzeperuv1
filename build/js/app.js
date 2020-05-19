@@ -151,8 +151,8 @@ var separateFirstText = function separateFirstText($) {
   });
 };
 var showVideos = function showVideos($) {
-  $('.show-videos').click(function () {
-    $('.vimeography-theme-harvestone').toggleClass('show-video');
+  $('.btn-show-videos').click(function () {
+    $('.video-hidden').toggleClass('video-show');
   });
 };
 

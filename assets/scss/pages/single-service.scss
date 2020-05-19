@@ -42,20 +42,22 @@
                 @apply shadow-outline  outline-none;
             }
         }
+        iframe{
+            video{
+                @apply w-full ; 
+            }
+        }
        
     }
 }
 
-// Ocultando componentes de vimeo
-.player .vp-title .vp-title-header { 
-    opacity: 0 !important;
+// Video portafolio
+.video{
+    &-hidden{
+        @apply hidden;   
+    }
+    &-show{
+        display: block !important; 
+    }
 }
-.vp-sidedock {
-    opacity: 0;
-}
-.vimeography-theme-harvestone{
-    display: none;
-}
-.show-video{
-    display: block !important;
-}
+ 

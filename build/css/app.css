@@ -20919,19 +20919,15 @@ code {
   outline: 0;
 }
 
-.player .vp-title .vp-title-header {
-  opacity: 0 !important;
+.service-main iframe video {
+  width: 100%;
 }
 
-.vp-sidedock {
-  opacity: 0;
-}
-
-.vimeography-theme-harvestone {
+.video-hidden {
   display: none;
 }
 
-.show-video {
+.video-show {
   display: block !important;
 }
 
