@@ -47,7 +47,7 @@ function ten_customize_register($wp_customize){
         // Asesoria
         $wp_customize -> add_section('frontpageasesoria',array(
             'title' => __('Asesoria', 'wpfrontpageasesoria'),
-            'description' => sprintf(__('Fotos de las fundadoras','wpfrontpageasesoria')),
+            'description' => sprintf(__('Imagenes y información  de Asesoria','wpfrontpageasesoria')),
             'priority' => 125
         )); 
          //  Imagen de asesoria
@@ -56,11 +56,22 @@ function ten_customize_register($wp_customize){
             'type'    => 'theme_mod'
         ));
         $wp_customize -> add_control(new WP_Customize_Image_Control($wp_customize,'asesoria_image',array(
-            'label'   => __('Foto de Martina', 'wpfrontpageasesoria'),
+            'label'   => __('Imagen de Asesoria', 'wpfrontpageasesoria'),
             'section' => 'frontpageasesoria',
             'setting' => 'asesoria_image',
             'priority' => 1
         )) );  
+ 
+         // Button  de asesoria
+         $wp_customize -> add_setting('asesoria_url', array(
+            'default' => _x('Link de asesoria','wpfrontpageasesoria'),
+            'type'    => 'theme_mod'
+        ));
+        $wp_customize -> add_control('asesoria_url', array(
+            'label'   => __('Link de asesoria', 'wpfrontpageasesoria'),
+            'section' => 'frontpageasesoria',
+            'priority' => 3
+        ));
     }
  
     add_action('customize_register','ten_customize_register'); 
